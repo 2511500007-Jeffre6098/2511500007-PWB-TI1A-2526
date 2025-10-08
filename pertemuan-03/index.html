@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -24,21 +25,33 @@
     </section>
     <section id="about">
         <h2><strong>About Us!</strong></h2>
-        <p>🆔<strong>NIM:</strong> 2511500007
-    <br classes="name">👤 <strong>Nama:</strong> Jeffrey Deryata
-    <br>🏫 <strong>Kelas:</strong> TI1A 
-    <br>📌 <strong>Tempat &amp; Tanggal Lahir:</strong> Sungailiat, 30 April 2007
-      <br classes="hobby"><strong>Hobi:</strong> Gaming 🎮, Aviasi ✈️, Musik 🎸
-      <br classes="pasangan"><strong>Pasangan:</strong> Belum ada 😢
-      <br classes="Job"><strong>Pekerjaan:</strong> Mahasiswa 📚
-      <br><strong>Orang Tua:</strong> Null &amp; Null
-      <br><strong>Kakak:</strong> Null
-      <br><strong>Adik:</strong> Perempuan
-  </p>
+        <p>🆔<strong>NIM:</strong> 2511500007</p>
+    <p>👤 <strong>Nama:</strong> Jeffrey Deryata</p>
+    <p>🏫 <strong>Kelas:</strong> TI1A</p> 
+    <p>📌 <strong>Tempat &amp; Tanggal Lahir:</strong> Sungailiat, 30 April 2007</p>
+      <p class="hobby"><strong>Hobi:</strong> Gaming 🎮, Aviasi ✈️, Musik 🎸</p>
+      <p class="pasangan"><strong>Pasangan:</strong> Belum ada 😢</p>
+      <p class="Job"><strong>Pekerjaan:</strong> Mahasiswa 📚</p>
+      <p><strong>Orang Tua:</strong> Null &amp; Null</p>
+      <p><strong>Kakak:</strong> Null</p>
+      <p><strong>Adik:</strong> Perempuan</p>
     </section>
+    
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: 2511500007mahasiswa.atmaluhur.ac.id</p>
+        <form action="" method="get">
+            <label for="txtNama">Nama:</label>
+            <input type="text" id="txtname" name="txtname" placeholder="Masukkan nama " requried autocomplete="name">
+
+            <label for="txtEmail">Email:</label>
+            <input type="email" id="txtemail" name="txtemail" placeholder="Masukkan email " requried autocomplete="email">
+            
+            <label for="txtPesan">Pesan:</label>
+            <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis Pesan Anda..." required></textarea>
+            
+            <button type="submit">Kirim</button>
+            <button type="reset">Batal</button>
+        </form>
     </section>
 </main>
 <footer></footer>
