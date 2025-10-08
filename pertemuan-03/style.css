@@ -33,7 +33,7 @@
 }
 
 @media (max-width: 600px) {
-    #about {
+    #about p {
        flex-direction: column;
        align-items: flex-start;
     }
