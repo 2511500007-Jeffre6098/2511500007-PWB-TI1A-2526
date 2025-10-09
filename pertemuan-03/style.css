@@ -95,11 +95,53 @@
 }
 
 #contact button {
-    background-color: #003366;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    position: relative;
     font-size: 16px;
+    z-index: 0;
+}
+#contact button::after {
+   content: "";
+   z-index: -1;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: #003366;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+#contact button::before {
+    content: "";
+    background: linear-gradient(
+        35deg,
+        #294cff, #0075CC, #0394FF, #8FCEFF,
+        #00fff7, #14ffd0, #63ebae, #8cf0c3
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(4px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+#contact button:hover::before {
+    opacity: 1;
 }
