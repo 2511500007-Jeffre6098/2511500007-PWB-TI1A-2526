@@ -9,6 +9,11 @@
         <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  window.onbeforeunload = function() { // Biar pas refresh halaman, posisi scrollnya balik ke atas
+    window.scrollTo(0, 0); // Maaf pak, saya tambahin ini karena pas di refresh halaman, posisi scrollnya di tengah-tengah
+  }; // Lalu untuk halaman index.html mainnya. Itu ketimpa sama eksperimen saya pas pelajaran bapak rabu kemarin, jadi 50.00/100.00 :')'
+</script>
 <body>
 <header>
     <h1>
