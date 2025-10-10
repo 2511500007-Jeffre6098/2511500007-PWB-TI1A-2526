@@ -1,10 +1,93 @@
+nav {
+  display: flex;
+  align-items: center;            
+    margin-bottom: 20px;    
+    font-family: 'BBH Sans Hegarty', sans-serif;
+    border-radius: 10px;
+    width: 90%;
+    height: 100%;
+    padding: 80px;
+    z-index: 100;
+    
+}
+ 
+nav ul {
+    gap: 30px;
+    width: 100%;
+    background-color: #ffffff;
+    border: solid 6px #ffffff;
+    border-radius: 24px;
+    animation: glowing2 5s infinite ease-in-out;
+    opacity: 0.3 infinite linear;   
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    list-style: none;
+    padding: 10px 20px;
+}
+nav ul a {
+    text-decoration: none;
+    color: #003366;  
+}
+
+nav ul a:hover {
+    background-color: #003366;
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #005fb1,#6bffe4, #005fb1 );
+}
+#home h2 {
+    font-family: 'BBH Sans Hegarty', sans-serif;
+    text-align: center;
+    justify-items: ;
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 24px;
+    width: 50%;
+    margin: auto;
+    color: #fff;
+  -webkit-text-stroke: 1px #003366;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff,0 0 50px #ffffff, 0 0 70px #ffffff;
+    animation: glowing2 5s infinite ease-in-out;
+    opacity: 0.3 infinite linear;     
+    margin-bottom: 20px;}
+
+#home p {
+    font-family: 'BBH Sans Hegarty', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
 #about {
     background-color: rgb(255, 255, 255);
     padding: 20px;
-    border-radius: 10px;
     margin: 20px auto;
     max-width: 600px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: solid 2px #ffffff;
+    box-shadow: 0 0 15px #6effc5, 0 0 30px #9efff7,0 0 50px #ffffff, 0 0 70px #ffffff;
+    border-radius: 15px;
+    animation: glowing2 5s infinite ease-in-out;
+    opacity: 0.3 infinite linear;
+    margin-bottom: 50px;
     
 }
 #about h2 {
@@ -44,17 +127,22 @@
     }
 }
 
-#contact { background-color: rgb(255, 255, 255);
+#contact { 
+    background-color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 12px;
     margin: 20px auto;
     max-width: 600px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-bottom: 2px;
     padding-bottom: 6px;
     margin-top: 0;
     margin-bottom: 16px;
     align-content: center;
+    border: solid 2px #ffffff;
+    box-shadow: 0 0 15px #6effc5, 0 0 30px #9efff7,0 0 50px #ffffff, 0 0 70px #ffffff;
+    border-radius: 15px;
+    animation: glowing2 5s infinite ease-in-out;
+    opacity: 0.3 infinite linear;   
 }
 
 #contact h2 {
@@ -89,9 +177,13 @@
     padding: 10px;
     margin: 5px 0 15px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
+}
+
+#contact button[type="submit"] {
+    row-gap: 10px;
 }
 
 #contact button {
@@ -101,8 +193,10 @@
     border-radius: 8px;
     cursor: pointer;
     position: relative;
+    display: inline-block;
     font-size: 16px;
     z-index: 0;
+    gap: 10px;
 }
 #contact button::after {
    content: "";
@@ -118,25 +212,25 @@
 #contact button::before {
     content: "";
     background: linear-gradient(
-        35deg,
-        #294cff, #0075CC, #0394FF, #8FCEFF,
-        #00fff7, #14ffd0, #63ebae, #8cf0c3
+        45deg,
+        #0400ff, #006aff, #00b7ff, #8fe7ff,
+        #3bfea6, #61ffab, #8effae, #fffeac
     );
     position: absolute;
     top: -2px;
     left: -2px;
-    background-size: 600%;
+    background-size: 650%;
     z-index: -1;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
     filter: blur(4px);
-    animation: glowing 20s linear infinite;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 8px;
+    animation: glowing1 10s linear infinite;
+    transition: opacity 0.4s ease-in-out;
+    border-radius: 4px;
     opacity: 0;
 }
 
-@keyframes glowing {
+@keyframes glowing1 {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
@@ -145,3 +239,41 @@
 #contact button:hover::before {
     opacity: 1;
 }
+
+@keyframes glowing2 {
+    0% {
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #6effc5;
+  }
+  50% {
+    box-shadow: 0 0 20px #6effc5, 0 0 40px #ffffff;
+  }
+  100% {
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #6effc5;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+
+body {
+  animation: fadeInUp 1s ease forwards; 
+  opacity: 0; 
+}
+
+
+section:nth-child(1) { animation-delay: 0.2s; }
+section:nth-child(2) { animation-delay: 0.4s; }
+section:nth-child(3) { animation-delay: 0.6s; }
+
+
+
