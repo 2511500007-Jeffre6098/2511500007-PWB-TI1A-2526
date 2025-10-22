@@ -50,6 +50,14 @@ header li a:active {
     background-color: #cc04a1;
     transform: translateY(1px);
 }
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}   
 
 #home,
 #about,
