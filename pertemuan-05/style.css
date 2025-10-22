@@ -29,7 +29,6 @@ header li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
-    font-size: 32px;
     padding: 6px 12px;
 }
 
@@ -157,6 +156,20 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 16px;
+        top: 8px;
+    }
+    header nav {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        padding: 5px 0;
+        width: 100%;
+        
+    }
     header h1 {
         margin: 0 0 8px;
         font-size: 20px;
