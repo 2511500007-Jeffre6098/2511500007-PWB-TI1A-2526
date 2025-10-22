@@ -2,25 +2,35 @@ html{
     scroll-behavior: smooth;
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+}
 
-nav {
+header {
     background-color: #003366;
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-ul li {
+header ul {
     list-style: none;
-    display: inline;
-    margin-right: 32px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 10px;
 }
 
-ul a {
+header li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
     font-size: 32px;
+    padding: 6px 12px;
 }
 
 #home,
@@ -112,6 +122,12 @@ ul a {
     background-color: #cccccc;
     transform: translateY(-1px);
 }
+footer {
+     background: #222; 
+     color: #aaa; 
+     text-align: center;
+      padding: 10px; 
+    } 
 
 @media (max-width: 600px) {
 
