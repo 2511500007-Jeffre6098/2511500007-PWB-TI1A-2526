@@ -9,6 +9,9 @@ body {
     color: #333;
     line-height: 1.5;
 }
+header h1 {
+    color: #ffffff;
+}
 
 header {
     background-color: #003366;
@@ -168,8 +171,11 @@ footer {
         background-color: #003366;
         padding: 5px 0;
         width: 100%;
-        
     }
+    nav.active {
+        display: flex;
+    }
+
     header h1 {
         margin: 0 0 8px;
         font-size: 20px;
