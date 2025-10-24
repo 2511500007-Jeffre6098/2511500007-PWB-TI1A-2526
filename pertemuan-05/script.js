@@ -24,7 +24,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     [name, email, pesan].forEach(el => el.style.border = "");
 
     let isValid = true;
-    console.log("Email Confirmed")
+    console.log("Name Confirmed")
     if (name.value.trim().length < 3) {
         showError(name, "Please enter your name and must minimum 3 characters")
         isValid = false;
@@ -46,15 +46,15 @@ document.querySelector("form").addEventListener("submit", function (e) {
     }
 
     if (pesan.value.trim().length < 10) {
-        showError(pesan, "pesan minimum 10 characters for clarity.");
+        showError(pesan, "Message minimum 10 characters for clarity.");
         isValid = false;
-        console.log("pesan Not Met The Requirement")
+        console.log("Message Not Met The Requirement")
     }
 
     if (!isValid) {
         e.preventDefault();
     } else {
-        alert("Thank You for your feedback, " + name.value + "!\nYour pesan has been sent");
+        alert("Thank You for your feedback, " + name.value + "!\nYour message has been sent");
         console.log("Submission Completed")
     }
 });
