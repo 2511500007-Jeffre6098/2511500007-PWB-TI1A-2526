@@ -5,4 +5,5 @@ Nama: Jeffrey Deryata
 Hari ini Rabu, 10 Oktober 2025, saya mempelajari:
 <ol>
     <li>Menambahkan file Laragron.php</li>
+    <li>index.php</li>
 </ol>
