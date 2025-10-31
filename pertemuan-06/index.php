@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>"> <!-- Supaya pas di refresh halaman style.cssnya gak ke cache -->
 </head>
 <script>
     window.onbeforeunload = function() { // Biar pas refresh halaman, posisi scrollnya balik ke atas
@@ -24,6 +24,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#gpa">GPA</a></li>
             </ul>
         </nav>
     </header>
@@ -59,7 +60,80 @@
             <p><strong>Siblings Name:</strong> Null</p>
             <p><strong>Younger Siblings Name:</strong> Guurl</p>
         </section>
-
+        <section id="gpa">
+        <h2>My GPA</h2>
+        <?php
+        $namaMatkul1 = "Kalkulus";
+        $namaMatkul2 = "Logika Informatika";
+        $namaMatkul3 = "Pengantar Teknik Informatika";
+        $namaMatkul4 = "Aplikasi Perkantoran";
+        $namamatkul5 = "Dasar Basis Data";
+        $sksMatkul1 = "3";
+        $sksMatkul2 = "3";
+        $sksMatkul3 = "3";
+        $sksMatkul4 = "3";
+        $sksMatkul5 = "3";
+        $nilaiHadir1 = "90";
+        $nilaiHadir2 = "96";
+        $nilaiHadir3 = "100";
+        $nilaiHadir4 = "88";
+        $nilaiHadir5 = "100";
+        $nilaiTugas1 = "84";
+        $nilaiTugas2 = "90";
+        $nilaiTugas3 = "100";
+        $nilaiTugas4 = "81";
+        $nilaiTugas5 = "92";
+        $nilaiUTS1 = "89";
+        $nilaiUTS2 = "95";
+        $nilaiUTS3 = "92";
+        $nilaiUTS4 = "86";
+        $nilaiUTS5 = "90";
+        $nilaiUAS1 = "81";
+        $nilaiUAS2 = "89";
+        $nilaiUAS3 = "90";
+        $nilaiUAS4 = "91";
+        $nilaiUAS5 = "86";
+        $nilaiAkhir1 = "";
+        $nilaiAkhir2 = "";
+        $nilaiAkhir3 = "";
+        $nilaiAkhir4 = "";
+        $nilaiAkhir5 = "";
+        $grade1 = "";
+        $grade2 = "";
+        $grade3 = "";
+        $grade4 = "";
+        $grade5 = "";
+        $mutu1 = "";
+        $mutu2 = "";
+        $mutu3 = "";
+        $mutu4 = "";
+        $mutu5 = "";
+        $bobot1 = "";
+        $bobot2 = "";
+        $bobot3 = "";
+        $bobot4 = "";
+        $bobot5 = "";
+        $status1 = "";
+        $status2 = "";
+        $status3 = "";
+        $status4 = "";
+        $status5 = "";
+        $totalBobot = "";
+        $totalSKS = "";
+        $IPK = "";
+        ?>
+        <p><strong>Subject:</strong><?php echo $namaMatkul1?></p>
+        <p><strong>Credits:</strong><?php echo $sksMatkul1?></p>
+        <p><strong>Presence:</strong><?php echo $nilaiHadir1?></p>
+        <p><strong>Assignment:</strong><?php echo $nilaiTugas1?></p>
+        <p><strong>MTE:</strong><?php echo $nilaiUTS1?></p>
+        <p><strong>FE:</strong><?php echo $nilaiUAS1?></p>
+        <p><strong>Final Score:</strong><?php ?></p>
+        <p><strong>Grade:</strong><?php ?></p>
+        <p><strong>Quality Score:</strong><?php ?></p>
+        <p><strong>Weight:</strong><?php ?></p>
+        <p><strong>Status:</strong><?php ?></p>
+        </section>
         <section id="contact">
             <h2>Contact Us</h2>
             <form action="" method="get">
