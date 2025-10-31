@@ -10,7 +10,6 @@
 <body>
     <h1><?php echo "Hello World, PHP" ; ?></h1>
     <?php $nama = "Jeffrey Deryata"; 
-    $nama = "Yohanes Setiawan Japriadi"; 
     $umur = 25; $tinggi = 1.75; 
     $aktif = true; $hobi = ["Coding", "Memasak", "Musik"]; 
     $mahasiswa = (object)[   
@@ -42,7 +41,9 @@
     echo "\nNULL:\n"; 
 
     var_dump($nilai_akhir); 
-    echo "</pre>"; ?> 
+    echo "</pre>";
+     ?>
+     <?php for ($i=1; $i<=5; $i++) {   echo "Perulangan ke-$i <br>"; } ?> 
 </body>
 <footer>
     
