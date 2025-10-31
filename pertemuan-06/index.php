@@ -67,7 +67,7 @@
             $namaMatkul2 = "Logika Informatika";
             $namaMatkul3 = "Pengantar Teknik Informatika";
             $namaMatkul4 = "Aplikasi Perkantoran";
-            $namamatkul5 = "Dasar Basis Data";
+            $namaMatkul5 = "Dasar Basis Data";
 
             $sksMatkul1 = "3";
             $sksMatkul2 = "3";
@@ -75,28 +75,11 @@
             $sksMatkul4 = "3";
             $sksMatkul5 = "3";
 
-            $nilaiHadir1 = "90";
-            $nilaiHadir2 = "96";
-            $nilaiHadir3 = "100";
-            $nilaiHadir4 = "88";
-            $nilaiHadir5 = "100";
-            $nilaiTugas1 = "84";
-            $nilaiTugas2 = "90";
-            $nilaiTugas3 = "100";
-            $nilaiTugas4 = "81";
-            $nilaiTugas5 = "92";
-
-            $nilaiUTS1 = "89";
-            $nilaiUTS2 = "95";
-            $nilaiUTS3 = "92";
-            $nilaiUTS4 = "86";
-            $nilaiUTS5 = "90";
-
-            $nilaiUAS1 = "81";
-            $nilaiUAS2 = "89";
-            $nilaiUAS3 = "90";
-            $nilaiUAS4 = "91";
-            $nilaiUAS5 = "86";
+            $nilaiHadir1 = 90;  $nilaiTugas1 = 84;  $nilaiUTS1 = 89;  $nilaiUAS1 = 81;
+            $nilaiHadir2 = 96;  $nilaiTugas2 = 90;  $nilaiUTS2 = 95;  $nilaiUAS2 = 89;
+            $nilaiHadir3 = 100; $nilaiTugas3 = 100; $nilaiUTS3 = 92;  $nilaiUAS3 = 90;
+            $nilaiHadir4 = 88;  $nilaiTugas4 = 81;  $nilaiUTS4 = 86;  $nilaiUAS4 = 91;
+            $nilaiHadir5 = 100; $nilaiTugas5 = 92;  $nilaiUTS5 = 90;  $nilaiUAS5 = 86;
 
             $nilaiAkhir1 = (0.1 * $nilaiHadir1) + (0.2 * $nilaiTugas1) + (0.3 * $nilaiUTS1) + (0.4 * $nilaiUAS1);
             $nilaiAkhir2 = (0.1 * $nilaiHadir2) + (0.2 * $nilaiTugas2) + (0.3 * $nilaiUTS2) + (0.4 * $nilaiUAS2);
@@ -104,88 +87,8 @@
             $nilaiAkhir4 = (0.1 * $nilaiHadir4) + (0.2 * $nilaiTugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4);
             $nilaiAkhir5 = (0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5);
 
-            if ($nilaiHadir < 70) {
-                $grade = "E";
-            } elseif ($nilaiAkhir >= 85) {
-                $grade = "A";
-            } elseif ($nilaiAkhir >= 80) {
-                $grade = "A-";
-            } elseif ($nilaiAkhir >= 75) {
-                $grade = "B+";
-            } elseif ($nilaiAkhir >= 70) {
-                $grade = "B";
-            } elseif ($nilaiAkhir >= 65) {
-                $grade = "B-";
-            } elseif ($nilaiAkhir >= 60) {
-                $grade = "C+";
-            } elseif ($nilaiAkhir >= 55) {
-                $grade = "C";
-            } elseif ($nilaiAkhir >= 50) {
-                $grade = "C-";
-            } elseif ($nilaiAkhir >= 45) {
-                $grade = "D";
-            } else {
-                $grade = "E";
-            }
-
-            switch ($grade) {
-                case "A":
-                    $mutu = 4.0;
-                    break;
-                case "A-":
-                    $mutu = 3.7;
-                    break;
-                case "B+":
-                    $mutu = 3.3;
-                    break;
-                case "B":
-                    $mutu = 3.0;
-                    break;
-                case "B-":
-                    $mutu = 2.7;
-                    break;
-                case "C+":
-                    $mutu = 2.3;
-                    break;
-                case "C":
-                    $mutu = 2.0;
-                    break;
-                case "C-":
-                    $mutu = 1.7;
-                    break;
-                case "D":
-                    $mutu = 1.0;
-                    break;
-                case "E":
-                    $mutu = 0.0;
-                    break;
-                default:
-                    $mutu = 0.0;
-            }
-
-            $bobot = $mutu * $sksMatkul1;
-            if ($grade == 'D' || $grade == 'E') {
-                $status = "Not Pass";
-            } else {
-                $status = "Pass";
-            }
-
             
-            $totalBobot = "";
-            $totalSKS = "";
-            $IPK = "";
-            ?>
-            <p><strong>Subject:</strong><?php echo $namaMatkul1 ?></p>
-            <p><strong>Credits:</strong><?php echo $sksMatkul1 ?></p>
-            <p><strong>Presence:</strong><?php echo $nilaiHadir1 ?></p>
-            <p><strong>Assignment:</strong><?php echo $nilaiTugas1 ?></p>
-            <p><strong>MTE:</strong><?php echo $nilaiUTS1 ?></p>
-            <p><strong>FE:</strong><?php echo $nilaiUAS1 ?></p>
-            <p><strong>Final Score:</strong><?php echo $nilaiAkhir1 ?></p>
-            <p><strong>Grade:</strong><?php ?></p>
-            <p><strong>Quality Score:</strong><?php ?></p>
-            <p><strong>Weight:</strong><?php ?></p>
-            <p><strong>Status:</strong><?php ?></p>
+    ?>
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
