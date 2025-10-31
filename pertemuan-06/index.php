@@ -40,6 +40,7 @@
             <?php
             $nim = "2511500007";
             $NIM = "2511500001";
+            $nama = "Jeffrey Deryata";
             ?>
             <h2><strong>About Us!</strong></h2>
             <p><strong>🆔 NIM:</strong> <?php echo $nim; ?></p>
