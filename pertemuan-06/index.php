@@ -146,7 +146,7 @@
             $grade3 = hitungGrade($nilaiHadir3, $nilaiAkhir3);
             $grade4 = hitungGrade($nilaiHadir4, $nilaiAkhir4);
             $grade5 = hitungGrade(hadir: $nilaiHadir5, akhir: $nilaiAkhir5); // nah ini dia variabel kayak $nilaiHadir1-5 disetore dalam satu variabel $hadir di dalam variabel $grade1-5
-// biar ngehitung dan nulis kode untuk ngehitungnya grade1-5 manual satu per satu. capek nulisnya :,)
+// biar ngehitung dan nulis kode untuk ngehitungnya grade1-5 ga manual satu per satu. capek nulisnya :,)
 // kalo ga salah bisa disebut parameter namated arguments
             $mutu1 = hitungMutu($grade1);
             $mutu2 = hitungMutu($grade2);
