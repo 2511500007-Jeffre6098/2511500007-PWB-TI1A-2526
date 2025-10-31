@@ -184,8 +184,8 @@
                 echo "<p><strong>Angka Mutu:</strong> $mutu</p>";
                 echo "<p><strong>Bobot:</strong> " . number_format($bobot, 2) . "</p>";
                 echo "<p><strong>Status:</strong> $status</p>";
-                echo "<br>";
-            } // otomatis ntr akan ngegenerate semua data matkul sampai semua value yang udah distore habis teroutput 
+                echo "<br>"; // echo ini buat display atau panggil output atau hasilnya, <br> sebagai penjarak tiap tiap matkul
+            } // ntr akan otomatis ngegenerate semua data matkul sampai semua value yang udah distore habis teroutput 
 // biar ga usah nulis manual satu per satu struktur dalemnya ya kali :v
             display($namaMatkul1, $sksMatkul1, $nilaiHadir1, $nilaiTugas1, $nilaiUTS1, $nilaiUAS1, $nilaiAkhir1, $grade1, $mutu1, $bobot1, $status1);
             display($namaMatkul2, $sksMatkul2, $nilaiHadir2, $nilaiTugas2, $nilaiUTS2, $nilaiUAS2, $nilaiAkhir2, $grade2, $mutu2, $bobot2, $status2);
