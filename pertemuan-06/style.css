@@ -85,6 +85,15 @@ header li a:active {
     margin-bottom: 16px;
 }
 
+#gpa h3 {
+    color: #003366;
+    margin-bottom: 1px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+
+}
+
+
 #home p,
 #about p,
 #gpa p,
@@ -211,6 +220,8 @@ footer {
 
     #home h2,
     #gpa h2,
+    #gpa h3,
+    #gpa strong,
     #about strong,
     #contact label>span {
         text-align: left;

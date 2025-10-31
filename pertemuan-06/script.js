@@ -1,7 +1,7 @@
 const homeSection = document.getElementById("home");
-    const ucapan = document.createElement("p");
-    ucapan.textContent = "Enjoy testing around!";
-    homeSection.appendChild(ucapan);
+const ucapan = document.createElement("p");
+ucapan.textContent = "Enjoy testing around!";
+homeSection.appendChild(ucapan);
 
 document.getElementById("menuToggle").addEventListener("click", function () {
     const nav = document.querySelector("nav"); nav.classList.toggle("active");
@@ -115,8 +115,8 @@ window.addEventListener("resize", () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {  
-     
+document.addEventListener("DOMContentLoaded", function () {
+
     function setupCharCountLayout() {
         const label = document.querySelector('label[for="txtpesan"]');
         if (!label) return;
@@ -187,13 +187,25 @@ document.addEventListener("DOMContentLoaded", function () {
             span.style.flexShrink = '0';
             span.style.marginBottom = '0';
 
-            wrapper.style.flex = '1'; 
-            wrapper.style.display = 'flex'; 
-            wrapper.style.flexDirection = 'column'; 
-            counter.style.alignSelf = 'flex-end'; 
+            wrapper.style.flex = '1';
+            wrapper.style.display = 'flex';
+            wrapper.style.flexDirection = 'column';
+            counter.style.alignSelf = 'flex-end';
             counter.style.width = 'auto';
         }
     } setupCharCountLayout();
-    window.addEventListener('resize', applyResponsiveLayout);  
-     
-});  
+    window.addEventListener('resize', applyResponsiveLayout);
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target =
+        document.querySelector(this.getAttribute("href"));
+            target.scrollIntoView({behavior: "smooth"});
+    });
+});
+});
