@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'BHH Sans Bogle', sans-serif;
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.5;
@@ -32,27 +32,27 @@ header ul {
 header li a {
     text-decoration: none;
     color: #ffffff;
-    font-weight: 600;
-    font-size: medium;
+    font-size: 20px;
+    font-family: "Bungee", sans-serif;
     padding: 6px 20px;
 }
 
 header li a:hover {
     background-color: #85020d;
-    border-radius: 6px;
+    border-radius: 7px;
     transition: background-color 0.3s ease;
 }
 
 header li a:focus {
     outline: 2px solid #fff;
     outline-offset: 2px;
-    border-radius: 6px;
+    border-radius: 7px;
     background-color: rgba(255, 255, 255, 0.15);
 }
 
 header li a:active {
     background-color: #cc04a1;
-    transform: translateY(1px);
+    transform: translateY(1.5px);
 }
 .menu-toggle {
     display: none;
@@ -79,6 +79,7 @@ header li a:active {
 #about h2,
 #gpa h2,
 #contact h2 {
+    font-family: "Bungee", sans-serif;
     color: #003366;
     margin-top: 0;
     padding-bottom: 6px;
@@ -88,6 +89,8 @@ header li a:active {
 }
 
 #gpa h3 {
+    font-family: "Anton", sans-serif;
+    font-weight: 200;
     color: #003366;
     margin-bottom: 2px;
     text-align: center;
@@ -99,6 +102,7 @@ header li a:active {
 #about p,
 #gpa p,
 #contact label {
+    font-family: "Oswald", sans-serif;
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
@@ -131,6 +135,7 @@ header li a:active {
 }
 
 #contact button {
+    font-family: "Bungee", sans-serif;
     margin-top: 10px;
     display: inline-block;
     padding: 10px 24px;
