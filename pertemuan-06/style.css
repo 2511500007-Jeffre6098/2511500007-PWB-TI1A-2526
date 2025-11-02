@@ -67,12 +67,20 @@ header li a:active {
 #about,
 #gpa,
 #contact {
+    border: solid 1px #ffffff;
     background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     max-width: 700px;
     margin: 20px auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px #3fa6ff, 0 0 10px #66ccff,0 0 15px #82ffe8, 0 0 20px #a3ffee;
+    animation: glowing2 5s infinite ease-in-out;
+    opacity: 0.3 infinite linear;}  
+
+@keyframes glowing1 {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 
 #home h2,

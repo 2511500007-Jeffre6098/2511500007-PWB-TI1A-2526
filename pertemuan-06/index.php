@@ -33,6 +33,7 @@
         </nav>
     </header>
     <main>
+        <br>
         <section id="home">
             <h2><?php echo "Hello User!"; ?></h2>
             <h2>Welcome to My Website!</h2>
@@ -221,6 +222,7 @@
                 <button type="reset">Batal</button>
             </form>
         </section>
+        <br>
         <footer>
             <p>&copy; 2024 My Website. All rights reserved.</p>
         </footer>
