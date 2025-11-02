@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#gpa">GPA</a></li>
+                <li><a href="#gpa">Gpa</a></li>
                 <li><a href="#contact">Contact</a></li>
                 
             </ul>
@@ -59,11 +59,11 @@
         <section id="gpa">
             <h2>My GPA</h2>
             <?php
-            $namaMatkul1 = "Kalkulus";
-            $namaMatkul2 = "Logika Informatika";
-            $namaMatkul3 = "Pengantar Teknik Informatika";
-            $namaMatkul4 = "Aplikasi Perkantoran";
-            $namaMatkul5 = "Dasar Basis Data";
+            $namaMatkul1 = "Calkulus";
+            $namaMatkul2 = "Computational Logic";
+            $namaMatkul3 = "Introduction to Computer Science";
+            $namaMatkul4 = "Productivity Software ";
+            $namaMatkul5 = "Basic Database";
 
             $sksMatkul1 = 3;
             $sksMatkul2 = 3;
@@ -71,13 +71,13 @@
             $sksMatkul4 = 3;
             $sksMatkul5 = 3;
 
-            $nilaiHadir1 = 90;
-            $nilaiTugas1 = 84;
-            $nilaiUTS1 = 89;
-            $nilaiUAS1 = 81;
+            $nilaiHadir1 = 100;
+            $nilaiTugas1 = 90;
+            $nilaiUTS1 = 88;
+            $nilaiUAS1 = 84;
             $nilaiAkhir1 = (0.1 * $nilaiHadir1) + (0.2 * $nilaiTugas1) + (0.3 * $nilaiUTS1) + (0.4 * $nilaiUAS1);
 
-            $nilaiHadir2 = 96;
+            $nilaiHadir2 = 100;
             $nilaiTugas2 = 90;
             $nilaiUTS2 = 95;
             $nilaiUAS2 = 89;
@@ -89,8 +89,8 @@
             $nilaiUAS3 = 90;
             $nilaiAkhir3 = (0.1 * $nilaiHadir3) + (0.2 * $nilaiTugas3) + (0.3 * $nilaiUTS3) + (0.4 * $nilaiUAS3);
 
-            $nilaiHadir4 = 88;
-            $nilaiTugas4 = 81;
+            $nilaiHadir4 = 100;
+            $nilaiTugas4 = 82;
             $nilaiUTS4 = 86;
             $nilaiUAS4 = 91;
             $nilaiAkhir4 = (0.1 * $nilaiHadir4) + (0.2 * $nilaiTugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4);
@@ -163,11 +163,11 @@
             $bobot5 = $mutu5 * $sksMatkul5; // ngehitung bobot dari mutu1-5 dikali sksMatkul1-5
 
 
-            $status1 = ($grade1 == "D" || $grade1 == "E") ? "Gagal" : "Lulus";
-            $status2 = ($grade2 == "D" || $grade2 == "E") ? "Gagal" : "Lulus";
-            $status3 = ($grade3 == "D" || $grade3 == "E") ? "Gagal" : "Lulus";
-            $status4 = ($grade4 == "D" || $grade4 == "E") ? "Gagal" : "Lulus";
-            $status5 = ($grade5 == "D" || $grade5 == "E") ? "Gagal" : "Lulus"; // ngecek kalo grade1-5 D atau E, kalo iya statusnya Gagal, kalo bukan Lulus
+            $status1 = ($grade1 == "D" || $grade1 == "E") ? "Not Pass" : "Pass";
+            $status2 = ($grade2 == "D" || $grade2 == "E") ? "Not Pass" : "Pass";
+            $status3 = ($grade3 == "D" || $grade3 == "E") ? "Not Pass" : "Pass";
+            $status4 = ($grade4 == "D" || $grade4 == "E") ? "Not Pass" : "Pass";
+            $status5 = ($grade5 == "D" || $grade5 == "E") ? "Not Pass" : "Pass"; // ngecek kalo grade1-5 D atau E, kalo iya statusnya Not Pass, kalo bukan Pass
 
             $totalBobot = $bobot1 + $bobot2 + $bobot3 + $bobot4 + $bobot5;
             $totalSKS = $sksMatkul1 + $sksMatkul2 + $sksMatkul3 + $sksMatkul4 + $sksMatkul5;
@@ -176,15 +176,15 @@
             function display($nama, $sks, $hadir, $tugas, $uts, $uas, $akhir, $grade, $mutu, $bobot, $status) 
             {// function ini buat nampilin data per matkul jadi ga usah nulis manual satu per satu yey :>
                 echo "<h3>$nama</h3>";
-                echo "<p><strong>SKS:</strong> $sks</p>";
-                echo "<p><strong>Kehadiran:</strong> $hadir</p>";
-                echo "<p><strong>Tugas:</strong> $tugas</p>";
-                echo "<p><strong>UTS:</strong> $uts</p>";
-                echo "<p><strong>UAS:</strong> $uas</p>";
-                echo "<p><strong>Nilai Akhir:</strong> " . number_format($akhir, 2) . "</p>";
+                echo "<p><strong>Credits:</strong> $sks</p>";
+                echo "<p><strong>Attandance:</strong> $hadir</p>";
+                echo "<p><strong>Assignment:</strong> $tugas</p>";
+                echo "<p><strong>MTE:</strong> $uts</p>";
+                echo "<p><strong>FE:</strong> $uas</p>";
+                echo "<p><strong>Final Score:</strong> " . number_format($akhir, 2) . "</p>";
                 echo "<p><strong>Grade:</strong> $grade</p>";
-                echo "<p><strong>Angka Mutu:</strong> $mutu</p>";
-                echo "<p><strong>Bobot:</strong> " . number_format($bobot, 2) . "</p>";
+                echo "<p><strong>Grade Point:</strong> $mutu</p>";
+                echo "<p><strong>Weight:</strong> " . number_format($bobot, 2) . "</p>";
                 echo "<p><strong>Status:</strong> $status</p>";
                 echo "<br>"; // echo ini buat display atau panggil output atau hasilnya, <br> sebagai penjarak tiap tiap matkul
             } // ntr akan otomatis ngegenerate semua data matkul sampai semua value yang udah distore habis teroutput 
@@ -196,9 +196,9 @@
             display($namaMatkul5, $sksMatkul5, $nilaiHadir5, $nilaiTugas5, $nilaiUTS5, $nilaiUAS5, $nilaiAkhir5, $grade5, $mutu5, $bobot5, $status5);
 // nah display ini sebagai function yang ngegenerate semua data matkul yang udah disimpen didalam variabel-variabel sementara diatas jadi nama, sks, hadir, tugas, uts, uas, akhir, grade, mutu, bobot, status.
 // praktis singkat ga repot ga tebel jadi size filenya :v
-            echo "<h3>Total Bobot: " . number_format($totalBobot, 2) . "</h3>";
-            echo "<h3>Total SKS: $totalSKS</h3>";
-            echo "<h2>IPK: " . number_format($IPK, 2) . "</h2>"; // nah ini buat pentotalannya pake number_format biar format desimalnya rapi dan terkostumisasi
+            echo "<h3>Total Weight: " . number_format($totalBobot, 2) . "</h3>";
+            echo "<h3>Total Credits: $totalSKS</h3>";
+            echo "<br><h2>Cumulative GPA: " . number_format($IPK, 2) . "</h2>"; // nah ini buat pentotalannya pake number_format biar format desimalnya rapi dan terkostumisasi
             ?>
         </section>
         <section id="contact">
