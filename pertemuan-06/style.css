@@ -11,6 +11,7 @@ body {
 }
 header h1 {
     color: #ffffff;
+    font-family: "Bungee", sans-serif;
 }
 
 header {
@@ -32,7 +33,7 @@ header ul {
 header li a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Bungee", sans-serif;
     padding: 6px 20px;
 }
@@ -51,7 +52,7 @@ header li a:focus {
 }
 
 header li a:active {
-    background-color: #cc04a1;
+    background-color: #db05ac;
     transform: translateY(1.5px);
 }
 .menu-toggle {
@@ -73,7 +74,7 @@ header li a:active {
     padding: 20px;
     max-width: 700px;
     margin: 20px auto;
-    box-shadow: 0 0 5px #3fa6ff, 0 0 10px #66ccff,0 0 15px #82ffe8, 0 0 20px #a3ffee;
+    box-shadow: 0 0 5px #fff, 0 0 10px #66ccff, 0 0 15px #9ddefe,0 0 20px #92ffeb, 0 0 25px #acffe3;
     animation: glowing2 5s infinite ease-in-out;
     opacity: 0.3 infinite linear;}  
 
