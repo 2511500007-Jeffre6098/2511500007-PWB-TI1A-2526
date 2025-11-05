@@ -186,6 +186,16 @@ footer {
     padding: 10px;
 }
 
+#gpa .notpass {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+#gpa .pass {
+    color: #008000;
+    font-weight: bold;
+}
+
 @media (max-width: 600px) {
     .menu-toggle {
         display: block;
