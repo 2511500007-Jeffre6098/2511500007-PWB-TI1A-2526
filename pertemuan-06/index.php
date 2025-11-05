@@ -1,3 +1,11 @@
+<?php
+session_start();
+  $sesname = $_SESSION["nama"];
+  $sesemail = $_SESSION["email"];
+  $sespesan = $_SESSION["pesan"];
+  echo "$sesname $sesemail $sespesan";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -185,7 +193,6 @@
 
             function display($nama, $sks, $hadir, $tugas, $uts, $uas, $akhir, $grade, $mutu, $bobot, $status)
             { // function ini buat nampilin data per matkul jadi ga usah nulis manual satu per satu yey :>
-                $status = ($grade == "D" || $grade == "E") ? "<p div class='notpass'>Not Pass</p>" : "<p div class='pass'>Pass<p>"; // ngecek kalo grade D atau E, kalo iya statusnya Not Pass, kalo bukan
                 echo "<h3>$nama</h3>";
                 echo "<p><strong>Credits:</strong> $sks</p>";
                 echo "<p><strong>Attandance:</strong> $hadir</p>";
@@ -214,7 +221,7 @@
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
-            <form action="" method="get">
+            <form action="get_proses.php" method="GET">
                 <label for="txtNama"><span>Name:</span>
                     <input type="text" id="txtNama" name="txtNama" placeholder="Enter Name" autocomplete="name">
                 </label>
@@ -228,6 +235,11 @@
                 <button type="submit">Kirim</button>
                 <button type="reset">Batal</button>
             </form>
+            <p>Thanks for contacting us!
+      <label>Nama: <Strong><?php echo $sesname; ?></Strong></label>
+      <label>Email: <Strong><?php echo $sesemail; ?></Strong></label>
+      <label>Pesan: <Strong><?php echo $sespesan; ?></Strong></label>
+      </p>
         </section>
         <br>
         <footer>

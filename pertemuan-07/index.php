@@ -35,10 +35,10 @@
 
     <section id="about">
       <?php
-      $nim = 2511500007;
+      $nim = 2511500010;
       $NIM = '0344300002';
       $nama = "Say'yid Abdullah";
-      $Nama = 'Jeffrey Deryata';
+      $Nama = 'Al\'kautar Benyamin';
       ?>
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong>
@@ -66,15 +66,15 @@
       <form action="" method="GET">
 
         <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama"  autocomplete="name">
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
         </label>
 
         <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email"  autocomplete="email">
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" maxlength="200" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." ></textarea>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
 
