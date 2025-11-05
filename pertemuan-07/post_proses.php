@@ -1,8 +1,8 @@
 <?php
 session_start();
-  $sesname = $_SESSION["nama"];
-  $sesemail = $_SESSION["email"];
-  $sespesan = $_SESSION["pesan"];
-  echo "$sesname $sesemail $sespesan";
-  header("Location: get.php");
+  $sesname = $_POST["nama"];
+  $sesemail = $_POST["email"];
+  $sespesan = $_POST["pesan"];
+  echo $_SESSION["nama"]. $_SESSION["email"]. $_SESSION["pesan"]
+  #header("Location: post.php");
 ?>
