@@ -44,21 +44,27 @@
         <section id="about">
             <?php
             $nim = "2511500007";
-            $NIM = "2511500001";
-            $nama = "Jeffrey Deryata";
+            $Hobby = "Gaming, Aviation, Music";
+            $Birth_Place = "Sungailiat";
+            $name = "Jeffrey Deryata";
+            $Birth_Date = "30 April 2007";
+            $status = "None";
+            $job = "Student";
+            $class = "TI1A";
+            $family_name = "-";
             ?>
             <h2><strong>About Us!</strong></h2>
-            <p><strong>🆔 NIM:</strong> <?php echo $nim; ?></p>
-            <p><strong>👤 Full Name:</strong> <?php echo $nama ?></p>
-            <p><strong>🏫 Class:</strong> TI1A</p>
-            <p><strong>📌 Birth Place:</strong> Sungailiat</p>
-            <p><strong>📆 Birth Date:</strong> 30 April 2007</p>
-            <p class="hobby"><strong>Hobby:</strong> Gaming 🎮, Aviation ✈️, And Music 🎸</p>
-            <p class="pasangan"><strong>Status:</strong> None 😢</p>
-            <p class="Job"><strong>Job:</strong> Student 📚</p>
-            <p><strong>Parents Name:</strong> Null &amp; Null</p>
-            <p><strong>Siblings Name:</strong> Null</p>
-            <p><strong>Younger Siblings Name:</strong> Guurl</p>
+            <p><strong>NIM:</strong> <?php echo $nim; ?></p>
+            <p><strong>Full Name:</strong> <?php echo $name; ?></p>
+            <p><strong>Class:</strong> <?php echo $class; ?></p>
+            <p><strong>Birth Place:</strong> <?php echo $Birth_Place; ?></p>
+            <p><strong>Birth Date:</strong><?php echo $Birth_Date; ?> </p>
+            <p><strong>Hobby:</strong><?php echo $Hobby; ?> </p>
+            <p><strong>Status:</strong> <?php echo $status; ?></p>
+            <p><strong>Job:</strong> <?php echo $job; ?></p>
+            <p><strong>Parents Name:</strong><?php echo $family_name; ?> </p>
+            <p><strong>Siblings Name:</strong> <?php echo $family_name; ?></p>
+            <p><strong>Younger Siblings Name:</strong><?php echo $family_name; ?> </p>
         </section>
         <section id="gpa">
             <h2>My GPA</h2>
