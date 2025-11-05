@@ -185,6 +185,7 @@
 
             function display($nama, $sks, $hadir, $tugas, $uts, $uas, $akhir, $grade, $mutu, $bobot, $status)
             { // function ini buat nampilin data per matkul jadi ga usah nulis manual satu per satu yey :>
+                $status = ($grade == "D" || $grade == "E") ? "<p >Not Pass</p>" : "<h4>Pass</h4>"; // ngecek kalo grade D atau E, kalo iya statusnya Not Pass, kalo bukan
                 echo "<h3>$nama</h3>";
                 echo "<p><strong>Credits:</strong> $sks</p>";
                 echo "<p><strong>Attandance:</strong> $hadir</p>";
