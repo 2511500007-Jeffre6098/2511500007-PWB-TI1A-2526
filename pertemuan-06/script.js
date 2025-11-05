@@ -64,6 +64,8 @@ document.getElementById("txtPesan").addEventListener("input", function () {
     document.getElementById("charCount").textContent = panjang + "/400 characters";
 });
 
+
+
 function showError(inputElement, pesan) {
     const label = inputElement.closest("label");
     if (!label) return;
@@ -198,14 +200,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target =
-        document.querySelector(this.getAttribute("href"));
-            target.scrollIntoView({behavior: "smooth"});
-    });
-});
-});

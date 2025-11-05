@@ -76,7 +76,7 @@ header li a:active {
     margin: 20px auto;
     box-shadow: 0 0 5px #fff, 0 0 10px #66ccff, 0 0 15px #9ddefe,0 0 20px #92ffeb, 0 0 25px #acffe3;
     animation: glowing1 5s infinite ease-in-out;
-    opacity: 0.3 infinite linear;}  
+}  
 
 @keyframes glowing1 {
     0% { background-position: 0 0; }
@@ -204,6 +204,12 @@ footer {
         display: flex;
     }
 
+    header {
+        position: sticky;
+        padding: 16px;
+        top: 0;
+        z-index: 1000;
+    }
     header h1 {
         margin: 0 0 8px;
         font-size: 20px;
