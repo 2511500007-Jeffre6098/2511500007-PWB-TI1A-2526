@@ -1,9 +1,23 @@
 <?php
-session_start();
+  session_start();
+  $sesname ="";
+  $sesemail ="";  
+  
+  if (isset($_SESSION["nama"])):
   $sesname = $_SESSION["nama"];
+endif;
+  $sesemail ="";  
+
+  if (isset($_SESSION["email"])):
   $sesemail = $_SESSION["email"];
+  endif;
+$sespesan = "";
+  if (isset($_SESSION["pesan"])):
   $sespesan = $_SESSION["pesan"];
+  endif;
+  
   echo "$sesname $sesemail $sespesan";
+
 ?>
 
 <!DOCTYPE html>
@@ -71,18 +85,18 @@ session_start();
 
     <section id="contact">
       <h2>Kontak Kami</h2>
-      <form action="get_proses.php" method="GET">
+      <form action="post_proses.php" method="post">
 
         <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama"  autocomplete="name">
         </label>
 
         <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" autocomplete="email">
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." ></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
 
@@ -90,11 +104,13 @@ session_start();
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
-      <p>Thanks for contacting us!
-      <label>Nama: <Strong><?php echo $sesname; ?></Strong></label>
-      <label>Email: <Strong><?php echo $sesemail; ?></Strong></label>
-      <label>Pesan: <Strong><?php echo $sespesan; ?></Strong></label>
-      </p>
+      <?php if (empty($sesname)): ?>
+        <p>TerimaKasih sudah menghubungi kami:
+          <label>Nama: <strong><?php echo $sesname; ?></strong></label>
+          <label>Email: <strong><?php echo $sesemail; ?></strong></label>
+          <label>Pesan: <strong><?php echo $sespesan; ?></strong></label>
+        </p>
+        <?php endif; ?>
     </section>
   </main>
 

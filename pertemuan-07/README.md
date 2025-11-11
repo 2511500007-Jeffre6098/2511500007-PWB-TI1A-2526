@@ -11,4 +11,5 @@ Hari ini Rabu, 05 November 2025, saya mempelajari:
 <li>redirect dari get_proses.php ke get.php</li>
 <li>copy dan rename jadi post.php dan post_proses.php</li>
 <li>sesuaikan get ke post</li>
+<li>session destroy</li>
 </ol>
