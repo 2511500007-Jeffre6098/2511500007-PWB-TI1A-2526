@@ -1,13 +1,21 @@
-<?php
-session_start();
-  $sesname = $_SESSION["nama"];
+<?php 
+  session_start();
+  $sesname = "";
+  if (isset($_SESSION["nama"])):
+    $sesname = $_SESSION["nama"];
+  endif;
+
+  $sesemail ="";  
+  if (isset($_SESSION["email"])):
   $sesemail = $_SESSION["email"];
+  endif;
+
+  $sespesan = "";
+  if (isset($_SESSION["pesan"])):
   $sespesan = $_SESSION["pesan"];
-  echo "$sesname $sesemail $sespesan";
+  endif;
 ?>
-<? 
-echo $_GET['txtNama']; 
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +23,7 @@ echo $_GET['txtNama'];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Judul Halaman</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css?v=2">
 </head>
 
 <body>
@@ -73,7 +81,7 @@ echo $_GET['txtNama'];
 
     <section id="contact">
       <h2>Kontak Kami</h2>
-      <form action="get_proses.php" method="GET">
+      <form action="post_proses.php" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
           <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
@@ -92,14 +100,15 @@ echo $_GET['txtNama'];
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
+      <?php if (!empty($sesname . $sesemail . $sespesan)): ?>
       <p>Thanks for contacting us!
-      <label>Nama: <Strong><?php echo $sesname; ?></Strong></label>
-      <label>Email: <Strong><?php echo $sesemail; ?></Strong></label>
-      <label>Pesan: <Strong><?php echo $sespesan; ?></Strong></label>
+      <label><span>Nama:</span><Strong><?php echo $sesname; ?></Strong></label>
+      <label><span>Email:</span><Strong><?php echo $sesemail; ?></Strong></label>
+      <label><span>Pesan:</span><Strong><?php echo $sespesan; ?></Strong></label>
       </p>
+      <?php endif; ?>
     </section>
   </main>
-
   <footer>
     <p>&copy; 2025 Yohanes Setiawan Japriadi [0344300002]</p>
   </footer>

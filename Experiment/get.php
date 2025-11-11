@@ -1,13 +1,11 @@
-<?php
-session_start();
+<?php 
+  session_start();
   $sesname = $_SESSION["nama"];
   $sesemail = $_SESSION["email"];
   $sespesan = $_SESSION["pesan"];
   echo "$sesname $sesemail $sespesan";
 ?>
-<? 
-echo $_GET['txtNama']; 
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +13,7 @@ echo $_GET['txtNama'];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Judul Halaman</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css?v=2">
 </head>
 
 <body>
@@ -93,13 +91,12 @@ echo $_GET['txtNama'];
         <button type="reset">Batal</button>
       </form>
       <p>Thanks for contacting us!
-      <label>Nama: <Strong><?php echo $sesname; ?></Strong></label>
-      <label>Email: <Strong><?php echo $sesemail; ?></Strong></label>
-      <label>Pesan: <Strong><?php echo $sespesan; ?></Strong></label>
+      <label><span>Nama:</span><Strong><?php echo $sesname; ?></Strong></label>
+      <label><span>Email:</span><Strong><?php echo $sesemail; ?></Strong></label>
+      <label><span>Pesan:</span><Strong><?php echo $sespesan; ?></Strong></label>
       </p>
     </section>
   </main>
-
   <footer>
     <p>&copy; 2025 Yohanes Setiawan Japriadi [0344300002]</p>
   </footer>
