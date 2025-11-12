@@ -13,4 +13,8 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Menambahkan form action, label, dan input ke dalam section daftar</li>
   <li>Styling tombol submit dan cancel dan sedikit kreasi</li>
   <li>Menambahkan autocomplete didalam label section daftar</li>
+  <li>Menambahkan kode javascript untuk section daftar</li>
+  <li>Memperbaiki kode javascript dan kode php dari section contact form action="proses.php" menjadi contact_proses.php</li>
+  <li>Mengganti dan menambahkan daftar_proses.php</li>
+
 </ol>
