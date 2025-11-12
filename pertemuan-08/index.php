@@ -143,7 +143,7 @@ if (isset($_SESSION["daftar"])) {
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
-          <txtarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." ></txtarea>
+          <textarea id="txtPesan" name="txtPesan" rows="5" placeholder="Tulis pesan anda..." ></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
 
