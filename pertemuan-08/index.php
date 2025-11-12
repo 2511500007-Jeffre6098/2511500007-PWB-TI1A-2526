@@ -39,11 +39,9 @@ endif;
         <li><a href="#about">Tentang</a></li>
         <li><a href="#daftar">Daftar</a></li>
         <li><a href="#contact">Kontak</a></li>
-        
       </ul>
     </nav>
   </header>
-
   <main>
     <section id="home">
       <h2>Selamat Datang</h2>
@@ -54,36 +52,24 @@ endif;
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
-    <section id="about">
-      <?php
-      $NIM = 2511500007;
-      $nama = "Jeffrey Deryata";
-      $tempat = "Sungailiat";
-      $lahir = "30 April 2007";
-      $hobi = "Aviasi, Gaming, Musik";
-      $pekerjaan = "Mahasiswa";
-      ?>
-      <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong>
-        <?php
-        echo $NIM;
-        ?>
-      </p>
-      <p><strong>Nama Lengkap:</strong><?php echo $nama; ?> &#128526;</p>
-      <p><strong>Tempat Lahir:</strong><?php echo $tempat; ?></p>
-      <p><strong>Tanggal Lahir:</strong><?php echo $tempat; ?></p>
-      <p><strong>Hobi:</strong><?php echo $hobi; ?>&#127926;</p>
-      <p><strong>Pasangan:</strong>- &hearts;</p>
-      <p><strong>Pekerjaan:</strong><?php echo $pekerjaan; ?> &copy; 2025</p>
-      <p><strong>Nama Orang Tua:</strong>-</p>
-      <p><strong>Nama Kakak:</strong>-</p>
-      <p><strong>Nama Adik:</strong>-</p>
-    </section>
-
-  <section id="daftar">
-    <h2>Daftar Profil Pengunjung</h2>
+    <section id="daftar">
+    <h2>Pendaftaran Profil Pengunjung</h2>
 
   </section>
+
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <p><strong>NIM:</strong></p>
+      <p><strong>Nama Lengkap:</strong></p>
+      <p><strong>Tempat Lahir:</strong></p>
+      <p><strong>Tanggal Lahir:</strong></p>
+      <p><strong>Hobi:</strong></p>
+      <p><strong>Pasangan:</strong></p>
+      <p><strong>Pekerjaan:</strong></p>
+      <p><strong>Nama Orang Tua:</strong></p>
+      <p><strong>Nama Kakak:</strong></p>
+      <p><strong>Nama Adik:</strong></p>
+    </section>
 
     <section id="contact">
       <h2>Kontak Kami</h2>
