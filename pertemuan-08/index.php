@@ -69,7 +69,7 @@ endif;
         echo $NIM;
         ?>
       </p>
-      <p><strong>Nama Lengkap:</strong><?php echo $Nama; ?> &#128526;</p>
+      <p><strong>Nama Lengkap:</strong><?php echo $nama; ?> &#128526;</p>
       <p><strong>Tempat Lahir:</strong><?php echo $tempat; ?></p>
       <p><strong>Tanggal Lahir:</strong><?php echo $tempat; ?></p>
       <p><strong>Hobi:</strong><?php echo $hobi; ?>&#127926;</p>
