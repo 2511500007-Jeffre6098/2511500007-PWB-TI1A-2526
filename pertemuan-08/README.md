@@ -17,5 +17,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Memperbaiki kode javascript dan kode php dari section contact form action="proses.php" menjadi contact_proses.php</li>
   <li>Mengganti dan menambahkan daftar_proses.php</li>
   <li>Mengisi Proses_daftar.php</li>
-
+  <li>Memperbaiki typo txtarea menjadi textarea efek dari replace all</li>
 </ol>
