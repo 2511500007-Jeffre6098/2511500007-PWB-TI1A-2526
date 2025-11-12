@@ -57,43 +57,43 @@ endif;
       <form action="proses.php" method="POST"></form>
 
       <label for="textNIM"><span>NIM anda:</span>
-        <input type="textNIM" id="textNIM" name="textNIM" placeholder="Masukkan NIM anda">
+        <input type="textNIM" id="textNIM" name="textNIM" placeholder="Masukkan NIM anda" autocomplete="nim">
       </label>
 
       <label for="textName"><span>Nama anda:</span>
-        <input type="textName" id="textName" name="textName" placeholder="Masukkan nama lengkap anda">
+        <input type="textName" id="textName" name="textName" placeholder="Masukkan nama lengkap anda" autocomplete="nama">
       </label>
 
       <label for="textTempatlahir"><span>Tempat Lahir:</span>
-        <input type="textTempatlahir" id="textTempatlahir" name="textTempatlahir" placeholder="Masukkan tempat lahir anda">
+        <input type="textTempatlahir" id="textTempatlahir" name="textTempatlahir" placeholder="Masukkan tempat lahir anda" autocomplete="tempat">
       </label>
 
       <label for="textTanggallahir"><span>Tanggal Lahir:</span>
-        <input type="textTanggallahir" id="textTanggallahir" name="textTanggallahir" placeholder="Masukkan tanggal lahir anda">
+        <input type="textTanggallahir" id="textTanggallahir" name="textTanggallahir" placeholder="Masukkan tanggal lahir anda" autocomplete="lahir">
       </label>
 
       <label for="textHobi"><span>Hobi anda:</span>
-        <input type="textHobi" id="textHobi" name="textHobi" placeholder="Masukkan hobi anda">
+        <input type="textHobi" id="textHobi" name="textHobi" placeholder="Masukkan hobi anda" autocomplete="hobi">
       </label>
 
       <label for="textPasangan"><span>Pasangan Anda:</span>
-        <input type="textPasangan" id="textPasangan" name="textPasangan" placeholder="Masukkan nama pasangan anda">
+        <input type="textPasangan" id="textPasangan" name="textPasangan" placeholder="Masukkan nama pasangan anda" autocomplete="pasangan">
       </label>
 
       <label for="txtPekerjaan"><span>Pekerjaan anda:</span>
-        <input type="textPekerjaan" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan pekerjaan anda">
+        <input type="textPekerjaan" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan pekerjaan anda" autocomplete="pekerjaan">
       </label>
 
       <label for="txtOrangtua"><span>Nama Orangtua anda:</span>
-        <input type="textOrangtua" id="txtOrangtua" name="txtOrangtua" placeholder="Masukkan nama orang tua anda">
+        <input type="textOrangtua" id="txtOrangtua" name="txtOrangtua" placeholder="Masukkan nama orang tua anda" autocomplete="orangtua">
       </label>
 
       <label for="txtKakak"><span>Nama Kakak anda:</span>
-        <input type="textKakak" id="txtKakak" name="txtKakak" placeholder="Masukkan nama kakak anda">
+        <input type="textKakak" id="txtKakak" name="txtKakak" placeholder="Masukkan nama kakak anda" autocomplete="kakak">
       </label>
 
       <label for="txtAdik"><span>Nama Adik anda:</span>
-        <input type="textAdik" id="txtAdik" name="txtAdik" placeholder="Masukkan nama adik anda">
+        <input type="textAdik" id="txtAdik" name="txtAdik" placeholder="Masukkan nama adik anda" autocomplete="adik">
       </label>
       <br>
       <button type="submit">Kirim</button>

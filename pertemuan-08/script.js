@@ -94,11 +94,29 @@ document.querySelector("form").addEventListener("submit", function (e) {
     const nama = document.getElementById("txtNama");
     const email = document.getElementById("txtEmail");
     const pesan = document.getElementById("txtPesan");
-    e.preventDefault();
+    const NIM = document.getElementById("txtNIM");
+    const Nama = document.getElementById("txtName");
+    const tempat = document.getElementById("textTempatlahir");
+    const lahir = document.getElementById("txtTanggallahir");
+    const hobi = document.getElementById("textHobi");
+    const pasangan = document.getElementById("textPasangan");
+    const pekerjaan = document.getElementById("txtPekerjaan");
+    const orangtua = document.getElementById("txtOrangtua");
+    const kakak = document.getElementById("txtKakak");
+    const adik = document.getElementById("txtAdik");
+
     let isValid = true;
 
     document.querySelectorAll(".error-msg").forEach(el => el.remove());
-    [nama, email, pesan].forEach(el => el.style.border = "");
+    [nama, email, pesan, Nama, tempat, lahir, hobi, pasangan, pekerjaan, orangtua, kakak, adik].forEach(el => el.style.border = "");
+
+    if (Nama.value.trim().length < 3) {
+        showError(Nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
+        isValid = false;
+    } else if (!/^[A-Za-z\s]+$/.test(Nama.value)) {
+        showError(Nama, "Nama hanya boleh berisi huruf dan spasi.");
+        isValid = false;
+    }
 
     if (nama.value.trim().length < 3) {
         showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");

@@ -12,4 +12,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Merombak dan menghapus variable di section about</li>
   <li>Menambahkan form action, label, dan input ke dalam section daftar</li>
   <li>Styling tombol submit dan cancel dan sedikit kreasi</li>
+  <li>Menambahkan autocomplete didalam label section daftar</li>
 </ol>
