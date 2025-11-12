@@ -9,4 +9,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>Menambahkan section daftar di atas section about</li>
   <li>Styling section daftar seperti section contact</li>
+  <li>merombak dan menghapus variable di section about</li>
 </ol>
