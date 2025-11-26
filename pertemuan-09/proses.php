@@ -14,6 +14,7 @@ $arrBiodata = [
 "tanggal" => $_POST["txtTglLhr"] ?? "", 
 "hobi" => $_POST["txtHobi"] ?? "", 
 "pasangan" => $_POST["txtPasangan"] ?? "",
+"pekerjaan" => $_POST["txtKerja"] ?? "",
 "ortu" => $_POST["txtNmOrtu"] ?? "", 
 "kakak" => $_POST["txtNmKakak"] ?? "", 
 "adik" => $_POST["txtNmAdik"] ?? "" 

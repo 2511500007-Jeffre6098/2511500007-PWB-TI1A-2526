@@ -22,4 +22,5 @@ Hari ini Rabu, 26 November 2025, saya mempelajari:
   <li>menambahkan fungsi.php kedalam pertemuan-09</li>
   <li>mengisi fungsi.php</li>
   <li>menambahkan function tampilkanbiodata</li>
+  <li>mengganti foreach menjadi function tampilkanBiodata</li>
 </ol>
