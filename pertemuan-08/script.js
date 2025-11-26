@@ -90,204 +90,47 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', applyResponsiveLayout);
 });
 
-const formContact = document.getElementById("contact");
-if (formContact) {
-    formContact.addEventListener("submit", function (e) {
-        const nama = document.getElementById("txtNama");
-        const email = document.getElementById("txtEmail");
-        const pesan = document.getElementById("txtPesan");
-
-        let isValid = true;
-
-        document.querySelectorAll(".error-msg").forEach(el => el.remove());
-        [nama, email, pesan].forEach(el => el.style.border = "");
-
-        if (nama.value.trim().length < 3) {
-            showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
-            isValid = false;
-        } else if (!/^[A-Za-z\s-]+$/.test(nama.value)) {
-            showError(nama, "Nama hanya boleh berisi huruf, spasi, dan strip (-).");
-            isValid = false;
-        }
-
-        if (email.value.trim() === "") {
-            showError(email, "Email wajib diisi.");
-            isValid = false;
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-            showError(email, "Format email tidak valid. Contoh: nama@mail.com");
-            isValid = false;
-        }
-
-        if (pesan.value.trim() === "") {
-            showError(pesan, "Pesan wajib diisi.");
-            isValid = false;
-        } else if (pesan.value.trim().length < 10) {
-            showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
-            isValid = false;
-        }
-
-       if (!isValid) {
+document.querySelector("form").addEventListener("submit", function (e) {
+    const nama = document.geElementById("txtNama");
+    const email = document.getElementById("txtEmail");
+    const pesan = document.getElementById("txtPesan");
     e.preventDefault();
-    return false;
-}
+    let isValid = true;
+
+    document.querySelectorAll(".error-msg").forEach(el => el.remove());
+    [nama, email, pesan].forEach(el => el.style.border = "");
+
+    if (nama.value.trim().length < 3) {
+        showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
+        isValid = false;
+    } else if (!/^[A-Za-z\s]+$/.test(nama.value)) {
+        showError(nama, "Nama hanya boleh berisi huruf dan spasi.");
+        isValid = false;
+    }
+    if (email.value.trim() === "") {
+        showError(email, "Email wajib diisi.");
+        isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        showError(email, "Format email tidak valid. Contoh: nama@mail.com");
+        isValid = false;
+    }
+
+    if (pesan.value.trim() === "") {
+        showError(pesan, "Pesan wajib diisi.");
+        isValid = false;
+    } else if (pesan.value.trim().length < 10) {
+        showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
+        isValid = false;
+    }
+
+    if (!isValid) {
+        e.preventDefault();
+    } else {
         alert("Terima kasih, " + nama.value + "!\nPesan Anda telah dikirim.");
-        return false;
-        
-    });
-}
-
-
-function showError(inputElement, message) {
-    const label = inputElement.closest("label");
-    const container = (label && label.contains(inputElement)) ? label : inputElement.parentNode;
-    if (!container) return;
-    if (label) label.style.flexWrap = "wrap";
-    const small = document.createElement("small");
-    small.className = "error-msg";
-    small.textContent = message;
-    small.style.color = "red";
-    small.style.fontSize = "14px";
-    small.style.display = "block";
-    small.style.marginTop = "4px";
-    small.style.flexBasis = "100%";
-    small.dataset.forId = inputElement.id;
-    const ref = (inputElement.nextSibling && inputElement.nextSibling.parentNode === container) ? inputElement.nextSibling : null;
-    container.insertBefore(small, ref);
-    inputElement.style.border = "1px solid red";
-    alignErrorMessage(small, inputElement);
-}
-
-function alignErrorMessage(smallEl, inputEl) {
-    const isMobile = window.matchMedia("(max-width: 600px)").matches;
-    if (isMobile) {
-        smallEl.style.marginLeft = "0";
-        smallEl.style.width = "100%";
-        return;
+        e.target.submit();
     }
-    const label = inputEl.closest("label");
-    if (!label) return;
-    const rectLabel = label.getBoundingClientRect();
-    const rectInput = inputEl.getBoundingClientRect();
-    const offsetLeft = Math.max(0, Math.round(rectInput.left - rectLabel.left));
-    smallEl.style.marginLeft = offsetLeft + "px";
-    smallEl.style.width = Math.round(rectInput.width) + "px";
-}
-
-window.addEventListener("resize", () => {
-    document.querySelectorAll(".error-msg").forEach(small => {
-        const target = document.getElementById(small.dataset.forId);
-        if (target) alignErrorMessage(small, target);
-    });
 });
 
-const formDaftar = document.getElementById("daftarproses");
-if (formDaftar) {
- formDaftar.addEventListener("submit", function (e) {
-        const NIM = document.getElementById("txtNIM");
-        const Nama = document.getElementById("txtLengkap");
-        const tempat = document.getElementById("textTempatlahir");
-        const lahir = document.getElementById("txtTanggallahir");
-        const hobi = document.getElementById("textHobi");
-        const pasangan = document.getElementById("textPasangan");
-        const pekerjaan = document.getElementById("txtPekerjaan");
-        const orangtua = document.getElementById("txtOrangtua");
-        const kakak = document.getElementById("txtKakak");
-        const adik = document.getElementById("txtAdik"); 
-
-        let isValid = true;
-
-        document.querySelectorAll(".error-msg").forEach(el => el.remove());
-        [NIM, Nama, tempat, lahir, hobi, pasangan, pekerjaan, orangtua, kakak, adik].forEach(el => el.style.border = "");
- 
-if (NIM.value.trim() === "") { //NIM
-        showError(NIM, "Harap isi NIM anda.");
-        isValid = false;
-    } else if (!/^\d+$/.test(NIM.value)) {
-        showError(NIM, "NIM hanya boleh berisi Angka dan spasi.");
-        isValid = false;
-    }
-
-    if (Nama.value.trim().length < 3) { //NAMA
-        showError(Nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
-        isValid = false;
-    } else if (!/^[A-Za-z\s]+$/.test(Nama.value)) {
-        showError(Nama, "Hanya boleh berisi huruf dan spasi.");
-        isValid = false;
-    }
-
-    if (tempat.value.trim().length < 4) { //TEMPAT LAHIR
-        showError(tempat, "Nama tempat lahir minimal 4 huruf dan tidak boleh kosong.");
-        isValid = false;
-    } else if (!/^[A-Za-z\s]+$/.test(tempat.value)) {
-        showError(tempat, "Hanya boleh berisi huruf dan spasi.");
-        isValid = false;
-    }
-
-    if (lahir.value.trim().length < 6) { //TANGGAL LAHIR
-        showError(lahir, "Tanggal lahir minimal 6 huruf dan angka, tidak boleh kosong.");
-        isValid = false;
-    } else if (!/^[0-9\s]+$/.test(lahir.value)) {
-        showError(lahir, "Hanya boleh berisi huruf, angka, dan spasi.");
-        isValid = false;
-    }
-
-    if (hobi.value.trim().length < 4) { //HOBI
-        showError(hobi, "Mohon isi hobi anda.");
-        isValid = false;
-    } else if (!/^[A-Za-z\s]+$/.test(tempat.value)) {
-        showError(tempat, "Hanya boleh berisi huruf dan spasi.");
-        isValid = false;
-    }
-
-    if (pasangan.value.trim().length < 3) { //PASANGAN
-        showError(pasangan, "Nama pasangan minimal 3 huruf dan tidak boleh kosong minimal '-'.");
-        isValid = false;
-    } else if (!/^[A-Za-z\s-]+$/.test(Nama.value)) {
-        showError(pasangan, "Hanya boleh berisi huruf dan spasi.");
-        isValid = false;
-    }
-
-    if (pekerjaan.value.trim() === "") {    //PEKERJAAN
-        showError(pekerjaan, "Pekerjaan tidak boleh kosong minimal '-'.");
-        isValid = false;
-    } else if (!/^[A-Za-z\s-]+$/.test(Nama.value)) {
-        showError(pekerjaan, "Pekerjaan hanya boleh berisi huruf dan spasi.");
-        isValid = false;
-    }
-
-    if (orangtua.value.trim() === "") { // ORANGTUA
-        showError(orangtua, "Nama orangtua tidak boleh kosong minimal '-'.");
-        isValid = false;
-    } else if (!/^[A-Za-z\s-]+$/.test(Nama.value)) {
-        showError(orangtua, "Nama hanya boleh berisi huruf dan spasi.");
-        isValid = false;
-    }
-
-    if (kakak.value.trim() === "") {
-        showError(kakak, "Nama kakak tidak boleh kosong minimal '-'.");
-        isValid = false;
-    } else if (!/^[A-Za-z\s-]+$/.test(kakak.value)) {
-        showError(kakak, "Hanya boleh berisi huruf dan spasi.");
-        isValid = false;
-    }
-
-    if (adik.value.trim() === "") {
-        showError(adik, "Nama adik tidak boleh kosong minimal '-'.");
-        isValid = false;
-    } else if (!/^[A-Za-z\s-]+$/.test(adik.value)) {
-        showError(adik, "Hanya boleh berisi huruf dan spasi.");
-        isValid = false;
-    }
-
-if (!isValid) {
-    e.preventDefault();
-    return false;
-}
-    alert("Terima kasih, " + nama.value + "!\nPendaftaran Anda telah diisi.");
-    return false;
-});
-
-}
 function showError(inputElement, message) {
     const label = inputElement.closest("label");
     const container = (label && label.contains(inputElement)) ? label : inputElement.parentNode;

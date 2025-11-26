@@ -1,9 +1,19 @@
-<?php
-session_start();
-  $sesname = $_SESSION["nama"];
+<?php 
+  session_start();
+  $sesname = "";
+  if (isset($_SESSION["nama"])):
+    $sesname = $_SESSION["nama"];
+  endif;
+
+  $sesemail ="";  
+  if (isset($_SESSION["email"])):
   $sesemail = $_SESSION["email"];
+  endif;
+
+  $sespesan = "";
+  if (isset($_SESSION["pesan"])):
   $sespesan = $_SESSION["pesan"];
-  echo "$sesname $sesemail $sespesan";
+  endif;
 ?>
 
 <!DOCTYPE html>
@@ -235,11 +245,13 @@ session_start();
                 <button type="submit">Kirim</button>
                 <button type="reset">Batal</button>
             </form>
+            <?php if (!empty($sesname . $sesemail . $sespesan)): ?>
             <p>Thanks for contacting us!
       <label>Nama: <Strong><?php echo $sesname; ?></Strong></label>
       <label>Email: <Strong><?php echo $sesemail; ?></Strong></label>
       <label>Pesan: <Strong><?php echo $sespesan; ?></Strong></label>
       </p>
+      <?php endif; ?>
         </section>
         <br>
         <footer>
