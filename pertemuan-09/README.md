@@ -21,4 +21,5 @@ Hari ini Rabu, 26 November 2025, saya mempelajari:
   <li>menghapus baris 126 - 135 pada section about</li>
   <li>menambahkan fungsi.php kedalam pertemuan-09</li>
   <li>mengisi fungsi.php</li>
+  <li>menambahkan function tampilkanbiodata</li>
 </ol>
