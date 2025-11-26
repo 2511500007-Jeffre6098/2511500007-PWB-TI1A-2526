@@ -21,4 +21,16 @@ function tampilkanBiodata($conf, $arr)
     }
     return $html;
 }
+
+function tampilkanContactus($conf, $arr)
+{
+    $html = "";
+    foreach ($conf as $a => $c) {
+        $label = $c["label"];
+        $nilai = bersihkan($arr[$a] ?? '');
+        $suffix = $c["suffix"];
+        $html .= "<p><strong>{$label}</strong> {$nilai}{$suffix}</p>";
+    }
+    return $html;
+}
 ?>
