@@ -16,7 +16,7 @@ Hari ini Rabu, 26 November 2025, saya mempelajari:
   <li>echo session ke nilai label section contact</li>
   <li>echo session ke nilai label section contact selesai</li>
   <li>mengubah variable di proses.php menjadi data array</li>
-  <li>menghapus if isses sesnim dan lain lainnya menjadi fieldconfig</li>
+  <li>menghapus if isses sesnim dan lain lainnya menjadi fieldconfig yang berisi suffix dan prefix </li>
   <li>menambahkan kode looping foreach di section about</li>
   <li>menghapus baris 126 - 135 pada section about</li>
   <li>menambahkan fungsi.php kedalam pertemuan-09</li>
