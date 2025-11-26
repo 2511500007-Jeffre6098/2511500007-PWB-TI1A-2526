@@ -15,4 +15,6 @@ Hari ini Rabu, 26 November 2025, saya mempelajari:
   <li>tangkap session dari file proses selesai</li>
   <li>echo session ke nilai label section contact</li>
   <li>echo session ke nilai label section contact selesai</li>
+  <li>mengubah variable di proses.php menjadi data array</li>
+  <li>menghapus if isses sesnim dan lain lainnya menjadi fieldconfig dan suffix</li>
 </ol>
