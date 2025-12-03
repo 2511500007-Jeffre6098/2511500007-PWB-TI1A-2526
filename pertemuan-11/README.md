@@ -13,4 +13,4 @@ Hari ini Rabu, 03 Desember 2025, saya mempelajari:
   <li>Mengisi kode read.php</li>
   <li>Melakukan insert data cnama, cemail, cpesan kedalam tbl_tamu menggunakan PhpAdmin</li>
   <li>Menduplikat file read.php dan rename menjadi read_inc.php</li>
-</ol>
+  </ol>

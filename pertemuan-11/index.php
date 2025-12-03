@@ -37,7 +37,7 @@ $fieldConfig = [
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Judul Halaman</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -140,7 +140,11 @@ $fieldConfig = [
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
-           <?= tampilkanContactus($configField, $contactus); ?>
+           
+    </section>
+    <section id="read">
+      <h2>Yang Menghubungi Kami</h2>
+      <?php include 'read_inc.php'; ?>
     </section>
   </main>
 
