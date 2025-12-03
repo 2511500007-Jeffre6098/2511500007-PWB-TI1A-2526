@@ -2,9 +2,9 @@
 $host = "localhost";
 $user = "root";
 $pass = ""; 
-$dbnm = "db_pwd2025";
+$db = "db_pwd2025";
 
-$conn = mysqli_connect($host, $user, $pass, $dbnm);
+$conn = mysqli_connect(hostname: $host, username: $user, password: $pass, database: $db);
 
 if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());
