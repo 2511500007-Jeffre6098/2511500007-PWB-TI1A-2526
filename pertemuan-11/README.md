@@ -10,4 +10,5 @@ Hari ini Rabu, 03 Desember 2025, saya mempelajari:
   <li>Memasang PhpMyAdmin</li>
   <li>Login PhpAdmin dan membuat database db_pwd2025</li>
   <li>membuat file baru read.php</li>
+  <li>mengisi kode read.php</li>
 </ol>
