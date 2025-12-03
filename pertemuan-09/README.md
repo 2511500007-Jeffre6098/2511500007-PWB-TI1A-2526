@@ -25,5 +25,5 @@ Hari ini Rabu, 26 November 2025, saya mempelajari:
   <li>mengganti foreach menjadi function tampilkanBiodata pada section about</li>
   <li>menambahkan require_once __DIR__ "/fungsi.php"; ke index.php </li>
   <li>menambahkan "pekerjaan" yang lupa di tulis pada proses.php</li>
-  <li>membuat kode yang sama pada kontak kami</li>
+  <li>mengubah dan membuat kode yang sama pada kontak kami</li>
 </ol>
