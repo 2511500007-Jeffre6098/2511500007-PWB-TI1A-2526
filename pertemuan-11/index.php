@@ -2,14 +2,6 @@
 session_start();
 
 require_once __DIR__ . "/fungsi.php";
-
-$contactus = $_SESSION["contactus"] ?? [];
-
-$configField = [
-    "name" => ["label" => "Nama:", "suffix" => ""],
-    "email" => ["label" => "Email:", "suffix" => ""],
-    "pesan" => ["label" => "Pesan Anda:", "suffix" => ""]
-];
     
 ?>
 

@@ -15,4 +15,5 @@ Hari ini Rabu, 03 Desember 2025, saya mempelajari:
   <li>Menduplikat file read.php dan rename menjadi read_inc.php</li>
   <li>Mengisi file read_inc.php</li>
   <li>Mengganti perintah function menjadi require pada section yang menghubungi</li>
+  <li>Menghapus line session diganti dengan perintaj require tadi</li>
   </ol>
