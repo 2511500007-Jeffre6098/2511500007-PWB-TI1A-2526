@@ -43,7 +43,7 @@ CREATE TABLE `tbl_tamu` (
 INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`) VALUES
 (1, 'Gibran', 'fufufafa@gmail.com', 'hidup jokowi hidup dinasti jokowi.\r\nhidup prabowo'),
 (2, 'Richie Christian', 'riaricheesechristian@gmail.com', 'Name bai Christian tapi ukan Christian'),
-(3, 'GusMiftah', 'cabul123@gmail.com', 'Hidup Lont*');
+(3, 'GusMiftah', 'cabul123@gmail.com', 'Hidup Lontong');
 
 --
 -- Indexes for dumped tables
