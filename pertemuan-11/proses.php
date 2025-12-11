@@ -1,14 +1,7 @@
 <?php
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    $_SESSION["error_txt"] = "Akses tidak valid.";
-    redirect_ke("index.php#contact");
-}
 
-    $name = ($_POST["txtNama"]) ?? "";
-    $email = ($_POST["txtEmail"]) ?? "";
-    $pesan = ($_POST["txtPesan"]) ?? ""
 
 
 $arrBiodata = [ 
