@@ -1,7 +1,7 @@
 <?php 
 $host = "localhost";
 $user = "root";
-$pass = ""; 
+$pass = "JDS.#01aeMYS"; 
 $db = "db_pwd2025";
 
 $conn = mysqli_connect(hostname: $host, username: $user, password: $pass, database: $db);

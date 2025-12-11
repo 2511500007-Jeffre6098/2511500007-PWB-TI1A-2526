@@ -2,7 +2,7 @@
 session_start();
 
 require_once __DIR__ . "/fungsi.php";
-    
+
 ?>
 
 <?php
@@ -109,30 +109,52 @@ $fieldConfig = [
 
     <section id="about">
       <h2>Tentang Saya</h2>
-      <?= tampilkanBiodata($fieldConfig, $biodata); ?> 
+      <?= tampilkanBiodata($fieldConfig, $biodata); ?>
     </section>
+
+    <?php
+    $success_txt = $_SESSION["success_txt"] ?? "";
+    $error_txt = $_SESSION["error_txt"] ?? "";
+    $outdated = $_SESSION["outdated"] ?? [];
+
+    unset($_SESSION["success_txt"], $_SESSION["error_txt"], $_SESSION["outdated"]);
+    ?>
 
     <section id="contact">
       <h2>Kontak Kami</h2>
+
+      <?php if (!empty($success_txt)): ?>
+        <div style="padding:10px; margin-bottom: 10px; background-color: #d4edda; color: #155724; border-radius: 6px;">
+          <?= $success_txt; ?>
+      <?php endif; ?>
+
+      <?php if (!empty($error_txt)): ?>
+        <div style="padding:10px; margin-bottom: 10px; background-color: #f8d7da; color: #721c24; border-radius: 6px;">
+          <?= $error_txt; ?>
+      <?php endif; ?>
+
       <form action="proses.php" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name"
+          value="<?=  isset($old["nama"]) ? htmlspecialchars($old["nama"]) : '' ?>">
         </label>
 
         <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email"
+          value="<?=  isset($old["email"]) ? htmlspecialchars($old["email"]) : '' ?>">
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required
+          value="<?=  isset($old["pesan"]) ? htmlspecialchars($old["pesan"]) : '' ?>"></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
-           
+
     </section>
     <section id="read">
       <h2>Yang Menghubungi Kami</h2>
