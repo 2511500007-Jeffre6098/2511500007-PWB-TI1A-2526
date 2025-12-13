@@ -120,40 +120,51 @@ $fieldConfig = [
     unset($_SESSION["flash_sukses"], $_SESSION["flash_error"], $_SESSION["outdated"]);
     ?>
 
+    <?php
+    $a = rand(1, 9);
+    $b = rand(1, 9);
+    $_SESSION["jawaban"] = $a + $b;
+    ?>
+
+
     <section id="contact">
       <h2>Kontak Kami</h2>
 
       <?php if (!empty($flash_sukses)): ?>
         <div style="padding:10px; margin-bottom: 10px; background-color: #d4edda; color: #155724; border-radius: 6px;">
           <?= $flash_sukses; ?>
-      <?php endif; ?>
+        <?php endif; ?>
 
-      <?php if (!empty($flash_error)): ?>
-        <div style="padding:10px; margin-bottom: 10px; background-color: #f8d7da; color: #721c24; border-radius: 6px;">
-          <?= $flash_error; ?>
-      <?php endif; ?>
+        <?php if (!empty($flash_error)): ?>
+          <div style="padding:10px; margin-bottom: 10px; background-color: #f8d7da; color: #721c24; border-radius: 6px;">
+            <?= $flash_error; ?>
+          <?php endif; ?>
 
-      <form action="proses.php" method="POST">
+          <form action="proses.php" method="POST">
 
-        <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama"  autocomplete="name"
-          value="<?=  isset($outdated["nama"]) ? htmlspecialchars($outdated["nama"]) : '' ?>">
-        </label>
+            <label for="txtNama"><span>Nama:</span>
+              <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" autocomplete="name"
+                value="<?= isset($outdated["nama"]) ? htmlspecialchars($outdated["nama"]) : '' ?>">
+            </label>
 
-        <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email"  autocomplete="email"
-          value="<?=  isset($outdated["email"]) ? htmlspecialchars($outdated["email"]) : '' ?>">
-        </label>
+            <label for="txtEmail"><span>Email:</span>
+              <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" autocomplete="email"
+                value="<?= isset($outdated["email"]) ? htmlspecialchars($outdated["email"]) : '' ?>">
+            </label>
 
-        <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." 
-          value="<?=  isset($outdated["pesan"]) ? htmlspecialchars($outdated["pesan"]) : '' ?>"></textarea>
-          <small id="charCount">0/200 karakter</small>
-        </label>
+            <label for="txtPesan"><span>Pesan Anda:</span>
+              <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..."
+                value="<?= isset($outdated["pesan"]) ? htmlspecialchars($outdated["pesan"]) : '' ?>"></textarea>
+              <small id="charCount">0/200 karakter</small>
+            </label>
+            <label for="txtCaptcha">
+              <span>Berapa <?= $a ?> + <?= $b ?> ?</span>
+              <input type="number" id="txtCaptcha" name="txtCaptcha" placeholder="Jawaban" required>
+            </label>
 
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
-      </form>
+            <button type="submit">Kirim</button>
+            <button type="reset">Batal</button>
+          </form>
 
     </section>
     <section id="read">

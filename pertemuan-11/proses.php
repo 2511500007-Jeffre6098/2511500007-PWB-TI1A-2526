@@ -15,6 +15,8 @@ require_once 'fungsi.php';
 $name = bersih($_POST["txtNama"]) ?? "";
 $email = bersih($_POST["txtEmail"]) ?? "";
 $pesan = bersih($_POST["txtPesan"]) ?? "";
+$captcha = $_POST["txtCaptcha"] ?? "";
+$jawaban = $_SESSION["jawaban"] ?? null;
 
 $error = [];
 
@@ -37,6 +39,14 @@ if ($pesan === "") {
 } elseif (mb_strlen($pesan) > 200) {
     $error[] = "Mohon Maaf Pesan maksimal 200 karakter.";
 }
+
+if ($captcha === "") {
+    $error[] = "Captcha wajib diisi.";
+} elseif (!is_numeric($captcha) || (int)$captcha !== (int)$jawaban) {
+    $error[] = "Jawaban captcha salah.";
+}
+
+
 
 require 'koneksi.php';
 if (!empty($error)) {
