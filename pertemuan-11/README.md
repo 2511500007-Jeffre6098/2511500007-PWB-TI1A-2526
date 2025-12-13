@@ -13,4 +13,5 @@ Hari ini Kamis, 11 Desember 2025, saya mempelajari:
 <li>Menambahkan validasi error agar wajib diisi di proses.php</li>
 <li>Menambahkan tabel baru NO, dan dcreated_at pada read.php</li>
 <li>Export database ke file pertemuan-11</li>
+<li>Menambah Error jika pesan kurang dari 10 dan nama kurang dari 3</li>
 </ol>

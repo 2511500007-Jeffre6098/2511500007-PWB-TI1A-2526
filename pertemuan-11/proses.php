@@ -20,7 +20,9 @@ $error = [];
 
 if ($name === "") {
     $error[] = "Nama wajib diisi.";
-}
+} elseif (mb_strlen($name) < 3) {
+    $error[] = "Nama minimal 3 karakter.";
+} // ooo jadi mb_strlen buat ngitung karakter ya, bukan byte
 
 if ($email === "") {
     $error[] = "Email wajib diisi.";
@@ -30,7 +32,12 @@ if ($email === "") {
 
 if ($pesan === "") {
     $error[] = "Pesan wajib diisi.";
+} elseif (mb_strlen($pesan) < 10) {
+    $error[] = "Mohon Tulis Pesan minimal 10 karakter.";
+} elseif (mb_strlen($pesan) > 200) {
+    $error[] = "Mohon Maaf Pesan maksimal 200 karakter.";
 }
+
 require 'koneksi.php';
 if (!empty($error)) {
     $_SESSION["old"] = [
