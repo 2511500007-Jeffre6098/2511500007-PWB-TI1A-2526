@@ -15,7 +15,7 @@ require_once 'fungsi.php';
 $name = bersih($_POST["txtNama"]) ?? "";
 $email = bersih($_POST["txtEmail"]) ?? "";
 $pesan = bersih($_POST["txtPesan"]) ?? "";
-$captcha = $_POST["txtCaptcha"] ?? "";
+$bot_verification = $_POST["txtbot_verification"] ?? "";
 $jawaban = $_SESSION["jawaban"] ?? null;
 
 $error = [];
@@ -40,10 +40,10 @@ if ($pesan === "") {
     $error[] = "Mohon Maaf Pesan maksimal 200 karakter.";
 }
 
-if ($captcha === "") {
-    $error[] = "Captcha wajib diisi.";
-} elseif (!is_numeric($captcha) || (int)$captcha !== (int)$jawaban) {
-    $error[] = "Jawaban captcha salah.";
+if ($bot_verification === "") {
+    $error[] = "bot_verification wajib diisi.";
+} elseif (!is_numeric($bot_verification) || (int)$bot_verification !== (int)$jawaban) {
+    $error[] = "Jawaban bot_verification salah.";
 }
 
 

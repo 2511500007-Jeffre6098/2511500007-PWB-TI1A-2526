@@ -157,9 +157,9 @@ $fieldConfig = [
                 value="<?= isset($outdated["pesan"]) ? htmlspecialchars($outdated["pesan"]) : '' ?>"></textarea>
               <small id="charCount">0/200 karakter</small>
             </label>
-            <label for="txtCaptcha">
+            <label for="txtbot_verification">
               <span>Berapa <?= $a ?> + <?= $b ?> ?</span>
-              <input type="number" id="txtCaptcha" name="txtCaptcha" placeholder="Jawaban" required>
+              <input type="number" id="txtbot_verification" name="txtbot_verification" placeholder="Jawaban" required>
             </label>
 
             <button type="submit">Kirim</button>
