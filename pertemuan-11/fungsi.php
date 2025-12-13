@@ -1,4 +1,4 @@
-<?php function bersihkan($str)
+<?php function bersih($str)
 {
     return htmlspecialchars(trim($str));
 }
@@ -15,19 +15,20 @@ function tampilkanBiodata($conf, $arr)
     $html = "";
     foreach ($conf as $k => $v) {
         $label = $v["label"];
-        $nilai = bersihkan($arr[$k] ?? '');
+        $nilai = bersih($arr[$k] ?? '');
         $suffix = $v["suffix"];
         $html .= "<p><strong>{$label}</strong> {$nilai}{$suffix}</p>";
     }
     return $html;
 }
-
+?>
+<?php
 function tampilkanContactus($conf, $arr)
 {
     $html = "";
     foreach ($conf as $a => $c) {
         $label = $c["label"];
-        $nilai = bersihkan($arr[$a] ?? '');
+        $nilai = bersih($arr[$a] ?? '');
         $suffix = $c["suffix"];
         $html .= "<p><strong>{$label}</strong> {$nilai}{$suffix}</p>";
     }

@@ -6,9 +6,11 @@ $q = mysqli_query($conn, $sql);
 <table border="1" cellpadding="8" cellspacing="0">
     <tr>
         <th>ID</th>
+        <th>NO</th>
         <th>Nama</th>
         <th>Email</th>
         <th>Pesan</th>
+        <th>Date</th>
     </tr>
 
     <?php
@@ -16,9 +18,11 @@ $q = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_assoc($q)): ?>
         <tr>
             <td><?= $row['cid']; ?></td>
+            <td><?= $no++; ?></td>
             <td><?= htmlspecialchars($row['cnama']); ?></td>
             <td><?= htmlspecialchars($row['cemail']); ?></td>
             <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
+            <td><?= htmlspecialchars($row['dcreated_at']); ?></td>
         </tr>
         
         <?php endwhile; ?>  

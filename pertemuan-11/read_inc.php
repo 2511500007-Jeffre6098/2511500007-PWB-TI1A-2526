@@ -2,6 +2,7 @@
 
 <?php
 require 'koneksi.php';
+require_once 'fungsi.php';
 
 $configField = [
     "name" => ["label" => "Nama:", "suffix" => ""],
@@ -21,7 +22,8 @@ if (!$q) {
     $arrcontactus = [
         "name" => $row["cnama"] ?? "",
         "email" => $row["cemail"] ?? "",
-        "pesan" => $row["cpesan"] ?? ""
+        "pesan" => $row["cpesan"] ?? "",
+        "no" => $row["NO"] ?? "",
     ];
     echo tampilkanContactus($configField, $arrcontactus);
 }
