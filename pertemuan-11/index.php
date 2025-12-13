@@ -136,17 +136,17 @@ $fieldConfig = [
       <form action="proses.php" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name"
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama"  autocomplete="name"
           value="<?=  isset($outdated["nama"]) ? htmlspecialchars($outdated["nama"]) : '' ?>">
         </label>
 
         <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email"
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email"  autocomplete="email"
           value="<?=  isset($outdated["email"]) ? htmlspecialchars($outdated["email"]) : '' ?>">
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." 
           value="<?=  isset($outdated["pesan"]) ? htmlspecialchars($outdated["pesan"]) : '' ?>"></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
