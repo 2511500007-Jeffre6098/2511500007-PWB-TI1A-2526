@@ -5,8 +5,8 @@ $q = mysqli_query($conn, $sql);
 ?>
 <table border="1" cellpadding="8" cellspacing="0">
     <tr>
-        <th>ID</th>
         <th>NO</th>
+        <th>ID</th>
         <th>Nama</th>
         <th>Email</th>
         <th>Pesan</th>
