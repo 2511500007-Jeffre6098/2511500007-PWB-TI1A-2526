@@ -82,11 +82,11 @@ if (!empty($old)) {
             <form action="proses_update.php" method="POST">
             <input type="text" name="cid" value="<?= (int)$cid ?>">
                 <label for="txtNama"><span>Nama:</span>
-                    <input type="text" id="txtNama" name="txtNamaEd" placeholder="Masukkan nama" required autocomplete="name"
+                    <input type="text" id="txtNama" name="txtNamaEd" placeholder="Masukkan nama"  autocomplete="name"
                         value="<?= !empty($nama) ? $nama : '' ?>">
                 </label>
                 <label for="txtEmail"><span>Email:</span>
-                    <input type="email" id="txtEmail" name="txtEmailEd" placeholder="Masukkan email" required autocomplete="email"
+                    <input type="email" id="txtEmail" name="txtEmailEd" placeholder="Masukkan email"  autocomplete="email"
                         value="<?= !empty($email) ? $email : '' ?>">
                 </label>
                 <label for="txtPesan"><span>Pesan Anda:</span>
@@ -95,7 +95,7 @@ if (!empty($old)) {
                 </label>
                 <label for="txtverification">
                     <span>Berapa <?= $a ?> + <?= $b ?> ?</span>
-                    <input type="number" id="txtverification" name="txtverification" placeholder="Answer" required>
+                    <input type="number" id="txtverification" name="txtverification" placeholder="Answer" >
                 </label>
                 </label>
                 <button type="submit">Kirim</button>
