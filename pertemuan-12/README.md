@@ -13,3 +13,4 @@ Hari ini Kamis, 17 Desember 2025, saya mempelajari:
 <li>Menambahkan struktur html ke dalam file proses_update.php</li>
 <li>Menambahkan flash_sukses dan flash_error kedalam file proses_update.php</li>
 <li>Memperbaiki Typo error[] menjadi errors[] di proses_update.php</li>
+</ol>
