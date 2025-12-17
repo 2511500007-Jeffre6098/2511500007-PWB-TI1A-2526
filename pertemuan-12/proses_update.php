@@ -1,3 +1,10 @@
+<?php function redirect_ke($url)
+{
+    header("Location: " . $url);
+    exit();
+}
+?>
+
 <?php
 session_start();
 require __DIR__ . './koneksi.php';
@@ -20,37 +27,38 @@ if (!$cid) {
 $nama = bersih($_POST['txtNamaEd'] ?? '');
 $email = bersih($_POST['txtEmailEd'] ?? '');
 $pesan = bersih($_POST['txtPesanEd'] ?? '');
-$bot_verification = bersih($_POST["txtbot_verification"]) ?? "";
-$jawaban = $_SESSION["jawaban"] ?? null;
+$txtverification = $_POST["txtverification"] ?? "";
+$Answer = $_SESSION["Answer"] ?? null;
 
 
 $errors = [];
 
-if ($name === "") {
-    $error[] = "Nama wajib diisi.";
-} elseif (mb_strlen($name) < 3) {
-    $error[] = "Nama minimal 3 karakter.";
-} // ooo jadi mb_strlen buat ngitung karakter ya, bukan byte
+if ($nama === "") {
+    $errors[] = "Nama wajib diisi.";
+} elseif (mb_strlen($nama) < 3) {
+    $errors[] = "Nama minimal 3 karakter.";
+}
 
 if ($email === "") {
-    $error[] = "Email wajib diisi.";
-} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $error[] = "Format email tidak valid.";
+    $errors[] = "Email wajib diisi.";
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = "Format email tidak valid.";
 }
 
 if ($pesan === "") {
-    $error[] = "Pesan wajib diisi.";
+    $errors[] = "Pesan wajib diisi.";
 } elseif (mb_strlen($pesan) < 10) {
-    $error[] = "Mohon Tulis Pesan minimal 10 karakter.";
-} elseif (mb_strlen($pesan) > 200) {
-    $error[] = "Mohon Maaf Pesan maksimal 200 karakter.";
+    $errors[] = "Mohon Tulis Pesan minimal 10 karakter.";
 }
 
-if ($bot_verification === "") {
-    $error[] = "bot_verification wajib diisi.";
-} elseif (!is_numeric($bot_verification) || (int)$bot_verification !== (int)$jawaban) {
-    $error[] = "Jawaban bot_verification salah.";
+if ($txtverification === "") {
+    $errors[] = "Verifikasi bot wajib diisi.";
+} elseif (!is_numeric($txtverification) || (int)$txtverification !== (int)$Answer) {
+    $errors[] = "Jawaban Verifikasi bot salah.";
 }
+
 if (!empty($errors)) {
     $_SESSION['old'] = [
         'nama' => $nama,

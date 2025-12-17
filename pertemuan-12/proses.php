@@ -15,7 +15,7 @@ require_once 'fungsi.php';
 $name = bersih($_POST["txtNama"]) ?? "";
 $email = bersih($_POST["txtEmail"]) ?? "";
 $pesan = bersih($_POST["txtPesan"]) ?? "";
-$bot_verification = bersih($_POST["txtbot_verification"]) ?? "";
+$bot_verification = $_POST["txtbot_verification"] ?? "";
 $jawaban = $_SESSION["jawaban"] ?? null;
 
 $error = [];

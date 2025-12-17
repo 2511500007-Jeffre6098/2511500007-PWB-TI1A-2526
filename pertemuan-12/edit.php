@@ -46,7 +46,7 @@ if (!empty($old)) {
 <?php
     $a = rand(1, 9);
     $b = rand(1, 9);
-    $_SESSION["jawaban"] = $a + $b;
+    $_SESSION["Answer"] = $a + $b;
     ?>
 
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ if (!empty($old)) {
                 </div>
             <?php endif; ?>
             <form action="proses_update.php" method="POST">
-                <input type="text" name="cid" value="<?= (int)$cid; ?>">
+            <input type="text" name="cid" value="<?= (int)$cid ?>">
                 <label for="txtNama"><span>Nama:</span>
                     <input type="text" id="txtNama" name="txtNamaEd" placeholder="Masukkan nama" required autocomplete="name"
                         value="<?= !empty($nama) ? $nama : '' ?>">
@@ -93,9 +93,9 @@ if (!empty($old)) {
                     <textarea id="txtPesan" name="txtPesanEd" rows="4" placeholder="Tulis pesan anda..."
                         required> <?= !empty($pesan) ? $pesan : '' ?></textarea>
                 </label>
-                <label for="txtbot_verification">
+                <label for="txtverification">
                     <span>Berapa <?= $a ?> + <?= $b ?> ?</span>
-                    <input type="number" id="txtbot_verification" name="txtbot_verification" placeholder="Jawaban" required>
+                    <input type="number" id="txtverification" name="txtverification" placeholder="Answer" required>
                 </label>
                 </label>
                 <button type="submit">Kirim</button>
