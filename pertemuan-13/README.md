@@ -6,6 +6,6 @@ Nama: Jeffrey Deryata
 Hari ini Kamis, 17 Desember 2025, saya mempelajari:
 <ol>
 <li>Import Sql bahan praktikum pertemuan-13</li>
-<li>Menambah action baru di kolom action di read.php</li>
+<li>Menambah action baru delete di kolom action di read.php</li>
 <li>Membuat file baru proses_delete.php</li>
 </ol>
