@@ -11,4 +11,5 @@ Hari ini Kamis, 17 Desember 2025, saya mempelajari:
 <li>Copy Paste kode proses_update.php ke proses_delete.php</li>
 <li>Menghapus kode session untuk proses_update.php dan menyesuaikan kode dengan proses_delete.php untuk menghapus</li>
 <li>Menambahkan parameter cid untuk link delete di read.php</li>
+<li>Memperbaiki file proses_delete.php agar menggunakan parameter cid</li>
 </ol>
