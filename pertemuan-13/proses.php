@@ -43,7 +43,7 @@ if ($pesan === "") {
 if ($bot_verification === "") {
     $error[] = "bot_verification wajib diisi.";
 } elseif (!is_numeric($bot_verification) || (int)$bot_verification !== (int)$jawaban) {
-    $error[] = " Jawaban bot_verification salah.";
+    $error[] = "Jawaban bot_verification salah.";
 }
 
 

@@ -3,7 +3,7 @@
 NIM: 2511500007
 Nama: Jeffrey Deryata
 
-Hari ini Kamis, 11 Desember 2025, saya mempelajari:
+Hari ini Rabu, 11 Desember 2025, saya mempelajari:
 <ol>
 <li>Menambahkan variable $flash_sukses, $flash_error, $old di index.php</li>
 <li>Update fungsi.php untuk mempermudah proses direct</li>
