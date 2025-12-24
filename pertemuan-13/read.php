@@ -43,7 +43,7 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
         <tr>
             <td><?= $no++; ?></td>
             <td><a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
-                <a href="proses_delete.php?">Delete</a>
+                <a href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
             </td>
             <td><?= $row['cid']; ?></td>
             <td><?= htmlspecialchars($row['cnama']); ?></td>
