@@ -1,4 +1,9 @@
-<?php function bersih($str)
+
+
+
+<?php 
+
+function bersih($str)
 {
     return htmlspecialchars(trim($str));
 }
@@ -34,4 +39,5 @@ function tampilkanContactus($conf, $arr)
     }
     return $html;
 }
+
 ?>

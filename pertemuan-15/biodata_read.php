@@ -48,8 +48,8 @@ unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
     while ($row = mysqli_fetch_assoc($q)): ?>
         <tr>
             <td><?= $no++; ?></td>
-            <td><a href="edit.php?bid=<?= (int)$row['bid']; ?>">Edit</a>
-                <a onclick="return confirm('Apakah Anda Benar Ingin Menghapus <?= htmlspecialchars($row['bnmlengkap']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['bid']; ?>">Delete</a>
+            <td><a href="edit_biodata.php?bid=<?= (int)$row['bid']; ?>">Edit</a>
+                <a onclick="return confirm('Apakah Anda Benar Ingin Menghapus <?= htmlspecialchars($row['bnmlengkap']); ?>?')" href="bioproses_delete.php?bid=<?= (int)$row['bid']; ?>">Delete</a>
             </td>
             <td><?= $row['bid']; ?></td>
             <td><?= htmlspecialchars($row['bnim']); ?></td>
