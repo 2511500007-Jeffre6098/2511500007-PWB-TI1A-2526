@@ -10,14 +10,14 @@ session_start();
 require __DIR__ . './koneksi.php';
 require_once __DIR__ . '/fungsi.php';
 
-    $bid = filter_input(INPUT_GET, 'bid', FILTER_VALIDATE_INT, [
-        'options' => ['min_range' => 1]
-    ]);
+$bid = filter_input(INPUT_GET, 'bid', FILTER_VALIDATE_INT, [
+    'options' => ['min_range' => 1]
+]);
 
-    if (!$bid) {
-        $_SESSION['flash_gagal'] = 'bid Tidak Valid.';
-        redirect_ke('biodate_read.php?');
-    }
+if (!$bid) {
+    $_SESSION['flash_gagal'] = 'bid Tidak Valid.';
+    redirect_ke('biodate_read.php?');
+}
 
 $stmt = mysqli_prepare($conn, "DELETE FROM tbl_biomhs
                                              WHERE bid = ?");
@@ -31,7 +31,7 @@ mysqli_stmt_bind_param($stmt, "i", $bid);
 if (mysqli_stmt_execute($stmt)) {
     $_SESSION['flash_berhasil'] = 'Terima kasih, data Anda sudah dihapus.';
 } else {
-    
+
     $_SESSION['flash_gagal'] = 'Data gagal dihapus. Silakan coba lagi.';
 }
 mysqli_stmt_close($stmt);

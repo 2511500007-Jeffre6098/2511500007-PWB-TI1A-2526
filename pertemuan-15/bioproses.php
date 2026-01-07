@@ -110,16 +110,16 @@ if (mysqli_stmt_execute($stmt)) {
 } else {
     $_SESSION["outdated"] =
         [
-        "nim" => $nim,
-        "NmLengkap" => $NmLengkap,
-        "tempatlhr" => $tempatlhr,
-        "tanggallhr" => $tanggallhr,
-        "hobi" => $hobi,
-        "pasangan" => $pasangan,
-        "pekerjaan" => $pekerjaan,
-        "ortu" => $ortu,
-        "kakak" => $kakak,
-        "adik" => $adik
+            "nim" => $nim,
+            "NmLengkap" => $NmLengkap,
+            "tempatlhr" => $tempatlhr,
+            "tanggallhr" => $tanggallhr,
+            "hobi" => $hobi,
+            "pasangan" => $pasangan,
+            "pekerjaan" => $pekerjaan,
+            "ortu" => $ortu,
+            "kakak" => $kakak,
+            "adik" => $adik
         ];
     $_SESSION["flash_gagal"] = "Gagal menyimpan pesan silakan coba lagi.";
     redirect_ke("index.php#contact");

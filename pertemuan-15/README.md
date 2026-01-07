@@ -20,3 +20,4 @@ Hari ini Kamis, 7 Januari 2026, saya mempelajari:
 <li>Menduplikat file edit dan rename menjadi edit_biodata.php</li>
 <li>Update edit_biodata.php agar sesuai dengan section biodata pada index.php</li>
 <li>Menyesuaikan bioproses_delete.php dan biodata_read.php</li>
+<li>Menambahkan date ke dalam biodata_read.php<li>

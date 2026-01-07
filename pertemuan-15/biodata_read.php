@@ -41,6 +41,7 @@ unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
         <th>Nama Orang Tua</th>
         <th>Nama Kakak</th>
         <th>Nama Adik</th>
+        <th>Date</th>
     </tr>
 
     <?php
@@ -62,6 +63,7 @@ unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
             <td><?= htmlspecialchars($row['bnmortu']); ?></td>
             <td><?= htmlspecialchars($row['bnmkakak']); ?></td>
             <td><?= htmlspecialchars($row['bnmadik']); ?></td>
+            <td><?= htmlspecialchars($row['dcreated_at']); ?></td>
         </tr>
 
     <?php endwhile; ?>
