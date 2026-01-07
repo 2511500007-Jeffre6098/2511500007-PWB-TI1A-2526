@@ -3,7 +3,7 @@ session_start();
 require 'koneksi.php';
 require 'fungsi.php';
 
-$sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
+$sql = "SELECT * FROM tbl_biomhs ORDER BY bid DESC";
 $q = mysqli_query($conn, $sql);
 ?>
 
@@ -47,14 +47,19 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
     while ($row = mysqli_fetch_assoc($q)): ?>
         <tr>
             <td><?= $no++; ?></td>
-            <td><a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
-                <a onclick="return confirm('Apakah Anda Benar Ingin Menghapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
+            <td><a href="edit.php?bid=<?= (int)$row['bid']; ?>">Edit</a>
+                <a onclick="return confirm('Apakah Anda Benar Ingin Menghapus <?= htmlspecialchars($row['bnmlengkap']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['bid']; ?>">Delete</a>
             </td>
-            <td><?= $row['cid']; ?></td>
-            <td><?= htmlspecialchars($row['cnama']); ?></td>
-            <td><?= htmlspecialchars($row['cemail']); ?></td>
-            <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
-            <td><?= htmlspecialchars($row['dcreated_at']); ?></td>
+            <td><?= $row['bid']; ?></td>
+            <td><?= htmlspecialchars($row['bnmlengkap']); ?></td>
+            <td><?= htmlspecialchars($row['btmptlhr']); ?></td>
+            <td><?= htmlspecialchars($row['btgllhr']); ?></td>
+            <td><?= htmlspecialchars($row['bhobi']); ?></td>
+            <td><?= htmlspecialchars($row['bpasangan']); ?></td>
+            <td><?= htmlspecialchars($row['bpekerjaan']); ?></td>
+            <td><?= htmlspecialchars($row['bnmortu']); ?></td>
+            <td><?= htmlspecialchars($row['bnmkakak']); ?></td>
+            <td><?= htmlspecialchars($row['bnmadik']); ?></td>
         </tr>
 
     <?php endwhile; ?>
