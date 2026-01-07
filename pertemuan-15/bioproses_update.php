@@ -12,7 +12,7 @@ require_once __DIR__ . '/fungsi.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $_SESSION['flash_gagal'] = 'Akses tidak valid.';
-    redirect_ke('read.php');
+    redirect_ke('biodata_read.php');
 }
 
 $bid = filter_input(INPUT_POST, 'bid', FILTER_VALIDATE_INT, [
@@ -21,7 +21,7 @@ $bid = filter_input(INPUT_POST, 'bid', FILTER_VALIDATE_INT, [
 
 if (!$bid) {
     $_SESSION['flash_gagal'] = 'bid Tidak Valid.';
-    redirect_ke('edit.php?bid=' . (int)$bid);
+    redirect_ke('edit_biodata.php?bid=' . (int)$bid);
 }
 
 $nim = bersih($_POST["txtNim"]) ?? "";
@@ -34,7 +34,8 @@ $pekerjaan = bersih($_POST["txtKerja"]) ?? "";
 $ortu = bersih($_POST["txtNmOrtu"]) ?? "";
 $kakak = bersih($_POST["txtNmKakak"]) ?? "";
 $adik = bersih($_POST["txtNmAdik"]) ?? "";
-
+$captcha = bersih($_POST["txtcaptcha"] ?? "");
+$Jawaban = $_SESSION["Jawaban"] ?? null;
 
 $error = [];
 
@@ -82,6 +83,13 @@ if ($adik === "") {
     $error[] = "Tidak boleh kosong mohon diisi";
 }
 
+if ($captcha === "") {
+    $error[] = "Verifikasi bot wajib diisi.";
+} elseif (!is_numeric($captcha) || (int)$captcha !== (int)$Jawaban) {
+    $error[] = "Jawaban Verifikasi bot salah.";
+}
+
+
 if (!empty($error)) {
     $_SESSION['outdated'] = [
         "nim" => $nim,
@@ -96,7 +104,7 @@ if (!empty($error)) {
         "adik" => $adik
     ];
     $_SESSION['flash_gagal'] = implode('<br>', $error);
-    redirect_ke('edit.php?bid=' . (int)$bid);
+    redirect_ke('edit_biodata.php?bid=' . (int)$bid);
 }
 
 $stmt = mysqli_prepare($conn, "UPDATE tbl_biomhs
@@ -124,7 +132,7 @@ if (mysqli_stmt_execute($stmt)) {
         "adik" => $adik
     ];
     $_SESSION['flash_gagal'] = 'Data gagal diperbaharui. Silakan coba lagi.';
-    redirect_ke('edit.php?bid=' . (int)$bid);
+    redirect_ke('edit_biodata.php?bid=' . (int)$bid);
 }
 mysqli_stmt_close($stmt);
-redirect_ke('edit.php?bid=' . (int)$bid);
+redirect_ke('edit_biodata.php?bid=' . (int)$bid);

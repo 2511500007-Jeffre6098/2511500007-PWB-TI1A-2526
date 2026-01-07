@@ -66,9 +66,9 @@ if (!empty($outdated)) {
 ?>
 
 <?php
-$a = rand(1, 9);
-$b = rand(1, 9);
-$_SESSION["Answer"] = $a + $b;
+$a = rand(1, 10);
+$b = rand(1, 10);
+$_SESSION["Jawaban"] = $a + $b;
 ?>
 
 <!DOCTYPE html>
@@ -153,14 +153,14 @@ $_SESSION["Answer"] = $a + $b;
           <input type="text" id="txtNmAdik" name="txtNmAdik" placeholder="Masukkan Nama Adik"
             value="<?= !empty($adik) ? $adik : '' ?>">
         </label>
-        <label for="txtverification">
+        <label for="txtcaptcha">
           <span>Berapa <?= $a ?> + <?= $b ?> ?</span>
-          <input type="number" id="txtverification" name="txtverification" placehoutdateder="Answer">
+          <input type="number" name="txtcaptcha" autocomplete ="captcha">
         </label>
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
-        <a href="read.php" class="reset">Kembali</a>
+        <a href="biodata_read.php" class="reset">Kembali</a>
       </form>
     </section>
   </main>
