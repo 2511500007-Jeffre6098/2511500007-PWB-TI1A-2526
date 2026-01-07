@@ -31,10 +31,15 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
         <th>NO</th>
         <th>Action</th>
         <th>ID</th>
-        <th>Nama</th>
-        <th>Email</th>
-        <th>Pesan</th>
-        <th>Date</th>
+        <th>Nama Lengkap</th>
+        <th>Tanggal Lahir</th>
+        <th>Tempat Lahir</th>
+        <th>Hobi</th>
+        <th>Pasangan</th>
+        <th>Pekerjaan</th>
+        <th>Nama Orang Tua</th>
+        <th>Nama Kakak</th>
+        <th>Nama Adik</th>
     </tr>
 
     <?php
