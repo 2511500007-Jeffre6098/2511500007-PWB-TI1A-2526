@@ -14,3 +14,4 @@ Hari ini Kamis, 7 Januari 2026, saya mempelajari:
 <li>Menghapus $configField yang ada di index.php</li>
 <li>Membuat session baru yang terpisah di index.php</li>
 <li>Menambahkan isset old di setiap label section biodata index.php</li>
+<li>Menduplikat 3 file proses kemarin dan rename menjadi bioproses_update.php, bioproses_delete.php, dan bioproses.php</li>

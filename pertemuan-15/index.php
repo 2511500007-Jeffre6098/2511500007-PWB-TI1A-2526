@@ -58,55 +58,55 @@ require_once __DIR__ . "/fungsi.php";
             <?= $flash_gagal; ?>
           <?php endif; ?>
 
-      <form action="proses.php" method="POST">
+      <form action="bioproses.php" method="POST">
 
         <label for="txtNim"><span>NIM:</span>
-          <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required
+          <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" 
           value="<?= isset($outdated["nim"]) ? htmlspecialchars($outdated["nim"]) : '' ?>">
         </label>
 
         <label for="txtNmLengkap"><span>Nama Lengkap:</span>
-          <input type="text" id="txtNmLengkap" name="txtNmLengkap" placeholder="Masukkan Nama Lengkap" required
-          value="<?= isset($outdated["nmlengkap"]) ? htmlspecialchars($outdated["nmlengkap"]) : '' ?>">
+          <input type="text" id="txtNmLengkap" name="txtNmLengkap" placeholder="Masukkan Nama Lengkap" 
+          value="<?= isset($outdated["NmLengkap"]) ? htmlspecialchars($outdated["NmLengkap"]) : '' ?>">
         </label>
 
-        <label for="txtT4Lhr"><span>Tempat Lahir:</span>
-          <input type="text" id="txtT4Lhr" name="txtT4Lhr" placeholder="Masukkan Tempat Lahir" required
+        <label for="txtTempatLhr"><span>Tempat Lahir:</span>
+          <input type="text" id="txtTempatLhr" name="txtTempatLhr" placeholder="Masukkan Tempat Lahir" 
           value="<?= isset($outdated["tempatlhr"]) ? htmlspecialchars($outdated["tempatlhr"]) : '' ?>">
         </label>
 
         <label for="txtTglLhr"><span>Tanggal Lahir:</span>
-          <input type="text" id="txtTglLhr" name="txtTglLhr" placeholder="Masukkan Tanggal Lahir" required
-          value="<?= isset($outdated["tanggal"]) ? htmlspecialchars($outdated["tanggal"]) : '' ?>">
+          <input type="text" id="txtTglLhr" name="txtTglLhr" placeholder="Masukkan Tanggal Lahir" 
+          value="<?= isset($outdated["tanggallhr"]) ? htmlspecialchars($outdated["tanggallhr"]) : '' ?>">
         </label>
 
         <label for="txtHobi"><span>Hobi:</span>
-          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi" required
+          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi" 
           value="<?= isset($outdated["hobi"]) ? htmlspecialchars($outdated["hobi"]) : '' ?>">
         </label>
 
         <label for="txtPasangan"><span>Pasangan:</span>
-          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan" required
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Pasangan" 
           value="<?= isset($outdated["pasangan"]) ? htmlspecialchars($outdated["pasangan"]) : '' ?>">
         </label>
 
         <label for="txtKerja"><span>Pekerjaan:</span>
-          <input type="text" id="txtKerja" name="txtKerja" placeholder="Masukkan Pekerjaan" required
+          <input type="text" id="txtKerja" name="txtKerja" placeholder="Masukkan Pekerjaan" 
           value="<?= isset($outdated["pekerjaan"]) ? htmlspecialchars($outdated["pekerjaan"]) : '' ?>">
         </label>
 
         <label for="txtNmOrtu"><span>Nama Orang Tua:</span>
-          <input type="text" id="txtNmOrtu" name="txtNmOrtu" placeholder="Masukkan Nama Orang Tua" required
+          <input type="text" id="txtNmOrtu" name="txtNmOrtu" placeholder="Masukkan Nama Orang Tua" 
           value="<?= isset($outdated["ortu"]) ? htmlspecialchars($outdated["ortu"]) : '' ?>">
         </label>
 
         <label for="txtNmKakak"><span>Nama Kakak:</span>
-          <input type="text" id="txtNmKakak" name="txtNmKakak" placeholder="Masukkan Nama Kakak" required
+          <input type="text" id="txtNmKakak" name="txtNmKakak" placeholder="Masukkan Nama Kakak" 
           value="<?= isset($outdated["kakak"]) ? htmlspecialchars($outdated["kakak"]) : '' ?>">
         </label>
 
         <label for="txtNmAdik"><span>Nama Adik:</span>
-          <input type="text" id="txtNmAdik" name="txtNmAdik" placeholder="Masukkan Nama Adik" required
+          <input type="text" id="txtNmAdik" name="txtNmAdik" placeholder="Masukkan Nama Adik" 
           value="<?= isset($outdated["adik"]) ? htmlspecialchars($outdated["adik"]) : '' ?>">
         </label>
 
@@ -168,7 +168,7 @@ require_once __DIR__ . "/fungsi.php";
             </label>
             <label for="txtbot_verification">
               <span>Berapa <?= $a ?> + <?= $b ?> ?</span>
-              <input type="number" id="txtbot_verification" name="txtbot_verification" placeholder="Jawaban" required>
+              <input type="number" id="txtbot_verification" name="txtbot_verification" placeholder="Jawaban" >
             </label>
 
             <button type="submit">Kirim</button>

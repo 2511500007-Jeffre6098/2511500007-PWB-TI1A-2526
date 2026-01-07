@@ -6,10 +6,10 @@ require_once 'fungsi.php';
 
 $fieldConfig = [
   "nim" => ["label" => "NIM:", "suffix" => ""],
-  "nmlengkap" => ["label" => "Nama Lengkap:", "suffix" => " &#128526;"],
+  "NmLengkap" => ["label" => "Nama Lengkap:", "suffix" => " &#128526;"],
   "tempatlhr" => ["label" => "Tempat Lahir:", "suffix" => ""],
-  "tanggal" => ["label" => "Tanggal Lahir:", "suffix" => ""],
-  "hobi" => ["label" => "Hobi:", "suffix" => " &#127926"],
+  "tanggallhr" => ["label" => "Tanggal Lahir:", "suffix" => ""],
+  "hobi" => ["label" => "Hobi:", "suffix" => ""],
   "pasangan" => ["label" => "Pasangan:", "suffix" => " &hearts;"],
   "pekerjaan" => ["label" => "Pekerjaan:", "suffix" => " &copy; 2025"],
   "ortu" => ["label" => "Nama Orang Tua:", "suffix" => ""],
@@ -28,9 +28,9 @@ if (!$q) {
     while ($row = mysqli_fetch_assoc($q)) {
     $arrBiodata = [
         "nim" => $row ['bnim'] ?? "",
-        "nmlengkap" => $row["bnmlengkap"] ?? "",
+        "NmLengkap" => $row["bnmlengkap"] ?? "",
         "tempatlhr" => $row["btmptlhr"] ?? "",
-        "tanggal" => $row["btgllhr"] ?? "",
+        "tanggallhr" => $row["btgllhr"] ?? "",
         "hobi" => $row["bhobi"] ?? "",
         "pasangan" => $row["bpasangan"] ?? "",
         "pekerjaan" => $row["bpekerjaan"] ?? "",
@@ -38,7 +38,7 @@ if (!$q) {
         "kakak" => $row["bnmkakak"] ?? "",
         "adik" => $row["bnmadik"] ?? "",
     ];
-    echo tampilkanContactus($fieldConfig, $arrBiodata);
+    echo tampilkanBiodata($fieldConfig, $arrBiodata);
 }
 }
 ?>
