@@ -89,7 +89,7 @@ if (!empty($error)) {
     ];
 
     $_SESSION["flash_gagal"] = implode("<br>", $error);
-    redirect_ke("index.php#contact");
+    redirect_ke("index.php#biodata");
 }
 
 $sql = "INSERT INTO `tbl_biomhs` (bnim, bNmLengkap, btmptlhr, btgllhr, bhobi, bpasangan, bpekerjaan, bnmortu, bnmkakak, bnmadik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -98,7 +98,7 @@ $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
     $_SESSION["flash_gagal"] = "Terjadi kesalahan pada server (prepare gagal).";
-    redirect_ke("index.php#contact");
+    redirect_ke("index.php#biodata");
 }
 
 mysqli_stmt_bind_param($stmt, "ssssssssss", $nim, $NmLengkap, $tempatlhr, $tanggallhr, $hobi, $pasangan, $pekerjaan, $ortu, $kakak, $adik);
@@ -122,7 +122,7 @@ if (mysqli_stmt_execute($stmt)) {
             "adik" => $adik
         ];
     $_SESSION["flash_gagal"] = "Gagal menyimpan pesan silakan coba lagi.";
-    redirect_ke("index.php#contact");
+    redirect_ke("index.php#biodata");
 }
 mysqli_stmt_close($stmt);
 
