@@ -11,3 +11,4 @@ Hari ini Kamis, 7 Januari 2026, saya mempelajari:
 <li>Menyesuaikan kode pada biodata_read.php agar sesuai dengan tabel "tbl_biomhs"</li>
 <li>Menduplikat file read_inc.php dan merenam menjadi biodata_inc.php</li>
 <li>Menyesuaikan isi kode file biodata_inc.php</li>
+<li>Menghapus $configField yang ada di index.php</li>

@@ -8,21 +8,21 @@ $q = mysqli_query($conn, $sql);
 ?>
 
 <?php
-$flash_sukses = $_SESSION['flash_sukses'] ?? '';
-$flash_error = $_SESSION['flash_error'] ?? '';
+$flash_berhasil = $_SESSION['flash_berhasil'] ?? '';
+$flash_gagal = $_SESSION['flash_gagal'] ?? '';
 
-unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
+unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
 ?>
 
-<?php if (!empty($flash_sukses)): ?>
+<?php if (!empty($flash_berhasil)): ?>
 
     <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px;">
-        <?= $flash_sukses; ?>
+        <?= $flash_berhasil; ?>
     </div>
 <?php endif; ?>
-<?php if (!empty($flash_error)): ?>
+<?php if (!empty($flash_gagal)): ?>
     <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px;">
-        <?= $flash_error; ?>
+        <?= $flash_gagal; ?>
     </div>
 <?php endif; ?>
 
@@ -31,6 +31,7 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
         <th>NO</th>
         <th>Action</th>
         <th>ID</th>
+        <th>NIM</th>
         <th>Nama Lengkap</th>
         <th>Tanggal Lahir</th>
         <th>Tempat Lahir</th>
@@ -51,6 +52,7 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
                 <a onclick="return confirm('Apakah Anda Benar Ingin Menghapus <?= htmlspecialchars($row['bnmlengkap']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['bid']; ?>">Delete</a>
             </td>
             <td><?= $row['bid']; ?></td>
+            <td><?= htmlspecialchars($row['bnim']); ?></td>
             <td><?= htmlspecialchars($row['bnmlengkap']); ?></td>
             <td><?= htmlspecialchars($row['btmptlhr']); ?></td>
             <td><?= htmlspecialchars($row['btgllhr']); ?></td>
