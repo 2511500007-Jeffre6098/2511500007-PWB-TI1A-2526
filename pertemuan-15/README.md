@@ -13,3 +13,4 @@ Hari ini Kamis, 7 Januari 2026, saya mempelajari:
 <li>Menyesuaikan isi kode file biodata_inc.php</li>
 <li>Menghapus $configField yang ada di index.php</li>
 <li>Membuat session baru yang terpisah di index.php</li>
+<li>Menambahkan isset old di setiap label section biodata index.php</li>
