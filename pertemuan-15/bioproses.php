@@ -9,7 +9,7 @@
 session_start();
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     $_SESSION["flash_gagal"] = "Akses tidak valid.";
-    redirect_ke("index.php#contact");
+    redirect_ke("index.php#biodata");
 }
 require_once 'fungsi.php';
 $nim = bersih($_POST["txtNim"]) ?? "";

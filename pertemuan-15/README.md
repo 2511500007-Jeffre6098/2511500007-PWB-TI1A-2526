@@ -16,3 +16,5 @@ Hari ini Kamis, 7 Januari 2026, saya mempelajari:
 <li>Menambahkan isset old di setiap label section biodata index.php</li>
 <li>Menduplikat 3 file proses kemarin dan rename menjadi bioproses_update.php, bioproses_delete.php, dan bioproses.php</li>
 <li>Menyesuaikan isi file bioproses.php agar sesuai dengan section biodata pada index php</li>
+<li>Menyesuaikan/ Update file bioproses_update.php</li>
+<li>Menduplikat file edit dan rename menjadi edit_biodata.php</li>

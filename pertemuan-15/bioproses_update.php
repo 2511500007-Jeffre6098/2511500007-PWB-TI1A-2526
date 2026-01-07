@@ -11,83 +11,120 @@ require __DIR__ . './koneksi.php';
 require_once __DIR__ . '/fungsi.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    $_SESSION['flash_error'] = 'Akses tidak valid.';
+    $_SESSION['flash_gagal'] = 'Akses tidak valid.';
     redirect_ke('read.php');
 }
 
-$cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
+$bid = filter_input(INPUT_POST, 'bid', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
 ]);
 
-if (!$cid) {
-    $_SESSION['flash_error'] = 'CID Tidak Valid.';
-    redirect_ke('edit.php?cid=' . (int)$cid);
+if (!$bid) {
+    $_SESSION['flash_gagal'] = 'bid Tidak Valid.';
+    redirect_ke('edit.php?bid=' . (int)$bid);
 }
 
-$nama = bersih($_POST['txtNamaEd'] ?? '');
-$email = bersih($_POST['txtEmailEd'] ?? '');
-$pesan = bersih($_POST['txtPesanEd'] ?? '');
-$txtverification = $_POST["txtverification"] ?? "";
-$Answer = $_SESSION["Answer"] ?? null;
+$nim = bersih($_POST["txtNim"]) ?? "";
+$NmLengkap = bersih($_POST["txtNmLengkap"]) ?? "";
+$tempatlhr = bersih($_POST["txtTempatLhr"]) ?? "";
+$tanggallhr = bersih($_POST["txtTglLhr"]) ?? "";
+$hobi = bersih($_POST["txtHobi"]) ?? "";
+$pasangan = bersih($_POST["txtPasangan"]) ?? "";
+$pekerjaan = bersih($_POST["txtKerja"]) ?? "";
+$ortu = bersih($_POST["txtNmOrtu"]) ?? "";
+$kakak = bersih($_POST["txtNmKakak"]) ?? "";
+$adik = bersih($_POST["txtNmAdik"]) ?? "";
 
 
-$errors = [];
+$error = [];
 
-if ($nama === "") {
-    $errors[] = "Nama wajib diisi.";
-} elseif (mb_strlen($nama) < 3) {
-    $errors[] = "Nama minimal 3 karakter.";
+if ($nim === "") {
+    $error[] = "NIM wajib diisi.";
+} elseif (mb_strlen($nim) > 10) {
+    $error[] = "NIM maksimal 10 karakter.";
 }
 
-if ($email === "") {
-    $errors[] = "Email wajib diisi.";
+if ($NmLengkap === "") {
+    $error[] = "Nama wajib diisi.";
+} elseif (mb_strlen($NmLengkap) < 2) {
+    $error[] = "Nama minimal 2 karakter.";
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = "Format email tidak valid.";
+if ($tempatlhr === "") {
+    $error[] = "Tidak boleh kosong mohon diisi";
 }
 
-if ($pesan === "") {
-    $errors[] = "Pesan wajib diisi.";
-} elseif (mb_strlen($pesan) < 10) {
-    $errors[] = "Mohon Tulis Pesan minimal 10 karakter.";
+if ($tanggallhr === "") {
+    $error[] = "Tidak boleh kosong mohon diisi";
 }
 
-if ($txtverification === "") {
-    $errors[] = "Verifikasi bot wajib diisi.";
-} elseif (!is_numeric($txtverification) || (int)$txtverification !== (int)$Answer) {
-    $errors[] = "Jawaban Verifikasi bot salah.";
+if ($hobi === "") {
+    $error[] = "Tidak boleh kosong mohon diisi";
 }
 
-if (!empty($errors)) {
-    $_SESSION['old'] = [
-        'nama' => $nama,
-        'email' => $email,
-        'pesan' => $pesan
+if ($pasangan === "") {
+    $error[] = "Tidak boleh kosong mohon diisi";
+}
+
+if ($pekerjaan === "") {
+    $error[] = "Tidak boleh kosong mohon diisi";
+}
+
+if ($ortu === "") {
+    $error[] = "Tidak boleh kosong mohon diisi";
+}
+
+if ($kakak === "") {
+    $error[] = "Tidak boleh kosong mohon diisi";
+}
+
+if ($adik === "") {
+    $error[] = "Tidak boleh kosong mohon diisi";
+}
+
+if (!empty($error)) {
+    $_SESSION['outdated'] = [
+        "nim" => $nim,
+        "NmLengkap" => $NmLengkap,
+        "tempatlhr" => $tempatlhr,
+        "tanggallhr" => $tanggallhr,
+        "hobi" => $hobi,
+        "pasangan" => $pasangan,
+        "pekerjaan" => $pekerjaan,
+        "ortu" => $ortu,
+        "kakak" => $kakak,
+        "adik" => $adik
     ];
-    $_SESSION['flash_error'] = implode('<br>', $errors);
-    redirect_ke('edit.php?cid=' . (int)$cid);
+    $_SESSION['flash_gagal'] = implode('<br>', $error);
+    redirect_ke('edit.php?bid=' . (int)$bid);
 }
 
-$stmt = mysqli_prepare($conn, "UPDATE tbl_tamu
-SET cnama = ?, cemail = ?, cpesan = ?
-WHERE cid = ?");
+$stmt = mysqli_prepare($conn, "UPDATE tbl_biomhs
+SET bnim = ?, bnmlengkap = ?, btmptlhr = ?, btgllhr = ?, bhobi = ?, bpasangan =?, bpekerjaan = ?, bnmortu = ?, bnmkakak = ?, bnmadik = ?
+WHERE bid = ?");
 if (!$stmt) {
-    $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit.php?cid=' . (int)$cid);
+    $_SESSION['flash_gagal'] = 'Terjadi kesalahan sistem (prepare gagal).';
+    redirect_ke('edit_biodata.php?bid=' . (int)$bid);
 }
-mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $cid);
+mysqli_stmt_bind_param($stmt, "ssssssssssi", $nim, $NmLengkap, $tempatlhr, $tanggallhr, $hobi, $pasangan, $pekerjaan, $ortu, $kakak, $adik, $bid);
 if (mysqli_stmt_execute($stmt)) {
-    $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
-    redirect_ke('read.php');
+    $_SESSION['flash_berhasil'] = 'Terima kasih, data Anda sudah diperbaharui.';
+    redirect_ke('biodata_read.php');
 } else {
-    $_SESSION['old'] = [
-        'nama' => $nama,
-        'email' => $email,
-        'pesan' => $pesan,
+    $_SESSION['outdated'] = [
+        "nim" => $nim,
+        "NmLengkap" => $NmLengkap,
+        "tempatlhr" => $tempatlhr,
+        "tanggallhr" => $tanggallhr,
+        "hobi" => $hobi,
+        "pasangan" => $pasangan,
+        "pekerjaan" => $pekerjaan,
+        "ortu" => $ortu,
+        "kakak" => $kakak,
+        "adik" => $adik
     ];
-    $_SESSION['flash_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
-    redirect_ke('edit.php?cid=' . (int)$cid);
+    $_SESSION['flash_gagal'] = 'Data gagal diperbaharui. Silakan coba lagi.';
+    redirect_ke('edit.php?bid=' . (int)$bid);
 }
 mysqli_stmt_close($stmt);
-redirect_ke('edit.php?cid=' . (int)$cid);
+redirect_ke('edit.php?bid=' . (int)$bid);
