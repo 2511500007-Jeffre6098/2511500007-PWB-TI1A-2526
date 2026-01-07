@@ -1,25 +1,6 @@
 <?php
 session_start();
-
 require_once __DIR__ . "/fungsi.php";
-
-?>
-
-<?php
-$biodata = $_SESSION["biodata"] ?? [];
-
-$fieldConfig = [
-  "nim" => ["label" => "NIM:", "suffix" => ""],
-  "nama" => ["label" => "Nama Lengkap:", "suffix" => " &#128526;"],
-  "tempat" => ["label" => "Tempat Lahir:", "suffix" => ""],
-  "tanggal" => ["label" => "Tanggal Lahir:", "suffix" => ""],
-  "hobi" => ["label" => "Hobi:", "suffix" => " &#127926"],
-  "pasangan" => ["label" => "Pasangan:", "suffix" => " &hearts;"],
-  "pekerjaan" => ["label" => "Pekerjaan:", "suffix" => " &copy; 2025"],
-  "ortu" => ["label" => "Nama Orang Tua:", "suffix" => ""],
-  "kakak" => ["label" => "Nama Kakak:", "suffix" => ""],
-  "adik" => ["label" => "Nama Adik:", "suffix" => ""]
-];
 ?>
 
 <!DOCTYPE html>
