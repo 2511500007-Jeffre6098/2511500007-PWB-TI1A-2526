@@ -9,3 +9,4 @@ Hari ini Kamis, 7 Januari 2026, saya mempelajari:
 <li>Menduplikat file read.php dan rename menjadi biodata_read.php</li>
 <li>Membuat tabel baru "tbl_biomhs" pada database db_pwd2025</li>
 <li>Menyesuaikan kode pada biodata_read.php agar sesuai dengan tabel "tbl_biomhs"</li>
+<li>Menduplikat file read_inc.php dan merenam menjadi biodata_inc.php</li>
