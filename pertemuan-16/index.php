@@ -43,7 +43,7 @@ require_once __DIR__ . '/fungsi.php';
     $flash_gagal  = $_SESSION['flash_gagal'] ?? ''; #jika ada error
     $outdated          = $_SESSION['outdated'] ?? []; #untuk nilai lama form
 
-    unset($_SESSION['flash_sukses'], $_SESSION['flash_error'], $_SESSION['old']); #bersihkan 3 session ini
+    unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal'], $_SESSION['outdated']); #bersihkan 3 session ini
     ?>
 
     <section id="biodata">
