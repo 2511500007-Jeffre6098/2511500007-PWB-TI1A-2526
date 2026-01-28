@@ -39,20 +39,32 @@
     <th>Nama</th>
     <th>Alamat</th>
     <th>Tgl Mengajar</th>
-    <th>Created At</th>
+    <th>JJA</th>
+    <th>HomeBase Prodi</th>
+    <th>No HP</th>
+    <th>Nama Pasangan</th>
+    <th>Nama Anak</th>
+    <th>Bidang Ilmu</th>
   </tr>
   <?php $i = 1; ?>
   <?php while ($row = mysqli_fetch_assoc($q)): ?>
     <tr>
       <td><?= $i++ ?></td>
       <td>
-        <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
+        <a href="edit_biodosen.php?kd_dosen=<?= (int)$row['kd_dosen']; ?>">Edit</a>
+        <a onclick="return confirm('Anda yakin ingin menghapus <?= htmlspecialchars($row['nm_dosen']); ?>?')" href="dosen_proses_delete.php?cid=<?= (int)$row['kd_dosen']; ?>">Delete</a>
       </td>
       <td><?= $row['kd_dosen']; ?></td>
       <td><?= htmlspecialchars($row['nm_dosen']); ?></td>
       <td><?= htmlspecialchars($row['almt']); ?></td>
-      <td><?= htmlspecialchars($row['tgl_dosen']); ?></td>
+      <td><?= htmlspecialchars(string: $row['tgl_dosen']); ?></td>
+      <td><?= htmlspecialchars($row['jja_dosen']); ?></td>
+      <td><?= htmlspecialchars($row['homebase_prodi']); ?></td>
+      <td><?= htmlspecialchars($row['No_hp']); ?></td>
+      <td><?= htmlspecialchars($row['nm_pasangan']); ?></td>
+      <td><?= htmlspecialchars($row['nm_anak']); ?></td>
+      <td><?= htmlspecialchars($row['bidang_ilmu']); ?></td>
+      
       
     </tr>
   <?php endwhile; ?>
