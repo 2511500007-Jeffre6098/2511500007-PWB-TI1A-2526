@@ -95,23 +95,6 @@ require_once __DIR__ . '/fungsi.php';
       </form>
     </section>
 
-    <?php
-    $biodata = $_SESSION["biodata"] ?? [];
-
-    $fieldConfig = [
-      "kodedos" => ["label" => "Kode Dosen:", "suffix" => ""],
-      "nama" => ["label" => "Nama Dosen:", "suffix" => " &#128526;"],
-      "alamat" => ["label" => "Alamat Rumah:", "suffix" => ""],
-      "tanggal" => ["label" => "Tanggal Jadi Dosen:", "suffix" => ""],
-      "jja" => ["label" => "JJA Dosen:", "suffix" => " &#127926;"],
-      "prodi" => ["label" => "Homebase Prodi:", "suffix" => " &hearts;"],
-      "nohp" => ["label" => "Nomor HP:", "suffix" => " &copy; 2025"],
-      "pasangan" => ["label" => "Nama Pasangan:", "suffix" => ""],
-      "anak" => ["label" => "Nama Anak:", "suffix" => ""],
-      "ilmu" => ["label" => "Bidang Ilmu Dosen:", "suffix" => ""],
-    ];
-    ?>
-
     <section id="about">
       <h2>Tentang Saya</h2>
       <?= tampilkanBiodata($fieldConfig, $biodata) ?>
