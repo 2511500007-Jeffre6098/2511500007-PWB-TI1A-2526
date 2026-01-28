@@ -11,3 +11,4 @@ Hari ini Rabu, 28 Januari 2026, saya mengerjakan:
 <li>Mengganti dan menyesuaikan susunan kode dai proses_bio</li>
 <li>Menduplikat file read_inc dan merename menjadi read_ince_biodosen.php</li>
 <li>Memindahkan $fieldconfig yang ada di index.php kedalam read_inc_biodosen.php</li>
+<li>Mengganti fungsi tampilkan biodata menjadi include pada section about</li>
