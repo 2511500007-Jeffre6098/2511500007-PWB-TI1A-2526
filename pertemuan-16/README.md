@@ -13,3 +13,5 @@ Hari ini Rabu, 28 Januari 2026, saya mengerjakan:
 <li>Memindahkan $fieldconfig yang ada di index.php kedalam read_inc_biodosen.php</li>
 <li>Mengganti fungsi tampilkan biodata menjadi include pada section about</li>
 <li>Menyesuaikan kode pada file read_inc_biodosen.php</li>
+<li>Menambahkan isset value pada index.php</li>
+<li>Waktu tidak cukup pak :'></li>

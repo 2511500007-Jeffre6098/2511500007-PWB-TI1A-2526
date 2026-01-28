@@ -51,43 +51,53 @@ require_once __DIR__ . '/fungsi.php';
       <form action="proses_bio.php" method="POST">
 
         <label for="txtKodeDos"><span>Kode Dosen:</span>
-          <input type="text" id="txtKodeDos" name="txtKodeDos" placeholder="Masukkan Kode Dosen" required>
+          <input type="text" id="txtKodeDos" name="txtKodeDos" placeholder="Masukkan Kode Dosen" required
+          value="<?= isset($outdated["kodedos"]) ? htmlspecialchars($outdated["kodedos"]) : '' ?>">
         </label>
 
         <label for="txtNmDosen"><span>Nama Dosen:</span>
-          <input type="text" id="txtNmDosen" name="txtNmDosen" placeholder="Masukkan Nama Dosen" required>
+          <input type="text" id="txtNmDosen" name="txtNmDosen" placeholder="Masukkan Nama Dosen" required
+          value="<?= isset($outdated["namados"]) ? htmlspecialchars($outdated["namados"]) : '' ?>">
         </label>
 
         <label for="txtAlRmh"><span>Alamat Rumah:</span>
-          <input type="text" id="txtAlRmh" name="txtAlRmh" placeholder="Masukkan Alamat Rumah" required>
+          <input type="text" id="txtAlRmh" name="txtAlRmh" placeholder="Masukkan Alamat Rumah" required
+          value="<?= isset($outdated["alamat"]) ? htmlspecialchars($outdated["alamat"]) : '' ?>">
         </label>
 
         <label for="txtTglDosen"><span>Tanggal Jadi Dosen:</span>
-          <input type="text" id="txtTglDosen" name="txtTglDosen" placeholder="Masukkan Tanggal Jadi Dosen" required>
+          <input type="text" id="txtTglDosen" name="txtTglDosen" placeholder="Masukkan Tanggal Jadi Dosen" required
+          value="<?= isset($outdated["tglajar"]) ? htmlspecialchars($outdated["tglajar"]) : '' ?>">
         </label>
 
         <label for="txtJJA"><span>JJA Dosen:</span>
-          <input type="text" id="txtJJA" name="txtJJA" placeholder="Masukkan JJA Dosen" required>
+          <input type="text" id="txtJJA" name="txtJJA" placeholder="Masukkan JJA Dosen" required
+          value="<?= isset($outdated["jja"]) ? htmlspecialchars($outdated["jja"]) : '' ?>">
         </label>
 
         <label for="txtProdi"><span>Homebase Prodi:</span>
-          <input type="text" id="txtProdi" name="txtProdi" placeholder="Masukkan Homebase Prodi" required>
+          <input type="text" id="txtProdi" name="txtProdi" placeholder="Masukkan Homebase Prodi" required
+          value="<?= isset($outdated["prodi"]) ? htmlspecialchars($outdated["prodi"]) : '' ?>">
         </label>
 
         <label for="txtNoHP"><span>Nomor HP:</span>
-          <input type="text" id="txtNoHP" name="txtNoHP" placeholder="Masukkan Nomor HP" required>
+          <input type="text" id="txtNoHP" name="txtNoHP" placeholder="Masukkan Nomor HP" required
+          value="<?= isset($outdated["nohp"]) ? htmlspecialchars($outdated["nohp"]) : '' ?>">
         </label>
 
         <label for="txNamaPasangan"><span>Nama Pasangan:</span>
-          <input type="text" id="txNamaPasangan" name="txNamaPasangan" placeholder="Masukkan Nama Pasangan" required>
+          <input type="text" id="txNamaPasangan" name="txNamaPasangan" placeholder="Masukkan Nama Pasangan" required
+          value="<?= isset($outdated["pasangan"]) ? htmlspecialchars($outdated["pasangan"]) : '' ?>">
         </label>
 
         <label for="txtNmAnak"><span>Nama Anak:</span>
-          <input type="text" id="txtNmAnak" name="txtNmAnak" placeholder="Masukkan Nama Anak" required>
+          <input type="text" id="txtNmAnak" name="txtNmAnak" placeholder="Masukkan Nama Anak" required
+          value="<?= isset($outdated["anak"]) ? htmlspecialchars($outdated["anak"]) : '' ?>">
         </label>
 
         <label for="txtBidangIlmu"><span>Bidang Ilmu Dosen:</span>
-          <input type="text" id="txtBidangIlmu" name="txtBidangIlmu" placeholder="Masukkan Bidang Ilmu Dosen" required>
+          <input type="text" id="txtBidangIlmu" name="txtBidangIlmu" placeholder="Masukkan Bidang Ilmu Dosen" required
+          value="<?= isset($outdated["ilmu"]) ? htmlspecialchars($outdated["ilmu"]) : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>
